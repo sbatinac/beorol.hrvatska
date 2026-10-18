@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<base target="_top">
+<meta charset="UTF-8">
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "yb5fycq18l");
+</script>
+<title>Beorol Prima – Vaša robna marka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --page-bg:#0D0D0D;
+    --strip-bg:#FFFFFF;
+    --graphite:#0D0D0D;
+    --graphite-soft:#4A4A4A;
+    --paper:#FFFFFF;
+    --accent:#E2231A;
+    --accent-dark:#B81913;
+    --accent-blue:#1547B0;
+    --accent-blue-dark:#103B90;
+    --line:#E3E3E3;
+    --grey:#767676;
+    --font-display:'Oswald',sans-serif;
+    --font-body:'Inter',sans-serif;
+    --font-mono:'IBM Plex Mono',monospace;
+  }
+  *{box-sizing:border-box;}
+  html{ min-height:100%; background:#FFFFFF; }
+  body{
+    overflow-x:hidden;
+    margin:0;
+    min-height:100%;
+    font-family:var(--font-body);
+    color:var(--graphite);
+    -webkit-font-smoothing:antialiased;
+    background:#FFFFFF;
+  }
+  .strip{
+    max-width:none;
+    margin:0 auto;
+    min-height:100vh;
+    background:var(--strip-bg);
+    display:flex;
+    flex-direction:column;
+  }
+  .banner{
+    width:100%;
+    max-width:1000px;
+    margin:0 auto;
+    display:block;
+  }
+  .topbar-back-only{
+    display:block;
+    text-align:right;
+    padding:14px 28px;
+    font-family:var(--font-mono);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+    color:var(--graphite);
+    text-decoration:none;
+    opacity:.75;
+    transition:opacity .15s ease;
+  }
+  .topbar-back-only:hover{ opacity:1; }
+
+  .center-wrap{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:60px 28px;
+  }
+  .letter{
+    max-width:820px;
+    margin:0 auto;
+    padding:44px 28px 8px;
+  }
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+    margin:22px 0 8px;
+  }
+  .stat-card{
+    background:var(--graphite);
+    border-radius:10px;
+    padding:20px 14px;
+    text-align:center;
+  }
+  .stat-num{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:clamp(18px,4vw,26px);
+    color:var(--accent-blue);
+    line-height:1;
+    margin-bottom:6px;
+  }
+  .stat-label{
+    font-family:var(--font-mono);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    color:var(--paper);
+    opacity:.85;
+  }
+  .divider{
+    height:2px;
+    background:var(--graphite);
+    margin:32px 0 28px;
+    border:none;
+  }
+  .subhead{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:20px;
+    letter-spacing:.3px;
+    text-transform:uppercase;
+    color:var(--graphite);
+    margin:26px 0 12px;
+    border-left:4px solid var(--accent-blue);
+    padding:6px 0 6px 14px;
+  }
+  .subhead-lg{ font-size:24px; font-weight:700; }
+  .program-list{
+    list-style:none;
+    margin:0 0 26px;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .program-list li{
+    font-size:14px;
+    line-height:1.6;
+    color:var(--graphite-soft);
+    padding-left:20px;
+    position:relative;
+  }
+  .program-list li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:7px;
+    width:9px;
+    height:9px;
+    background:var(--accent-blue);
+    border-radius:1px;
+  }
+  .program-list li strong{ color:var(--graphite); }
+
+  /* VIDEO PREDSTAVLJANJE */
+  .video-frame-wrap{
+    position:relative;
+    width:100%;
+    padding-top:56.25%; /* 16:9 */
+    border-radius:8px;
+    overflow:hidden;
+    background:var(--graphite);
+  }
+  .video-frame-wrap video{
+    position:absolute;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    border:none;
+    object-fit:contain;
+    background:var(--graphite);
+  }
+  .video-wrap{
+    width:100%;
+  }
+  .pdf-wrap{
+    max-width:820px;
+    margin:0 auto;
+    padding:8px 28px 56px;
+  }
+  .pdf-card{
+    background:var(--paper);
+    border:2px solid var(--accent-blue);
+    border-radius:12px;
+    padding:22px;
+  }
+  #pdfTrack::-webkit-scrollbar{ height:6px; }
+  #pdfTrack::-webkit-scrollbar-track{ background:#E4E9F2; border-radius:4px; }
+  #pdfTrack::-webkit-scrollbar-thumb{ background:linear-gradient(90deg,var(--accent-blue-dark),var(--accent-blue)); border-radius:4px; }
+  #pdfTrack{ scrollbar-width:thin; scrollbar-color:var(--accent-blue) #E4E9F2; }
+  .pdf-thumb{
+    flex-shrink:0;
+    width:110px;
+    cursor:pointer;
+    border-radius:8px;
+    border:2px solid var(--accent-blue);
+    background:#FAFAFA;
+    padding:12px 8px;
+    text-align:center;
+    transition:border-color .15s ease, background .15s ease, box-shadow .15s ease;
+  }
+  .pdf-thumb.active{
+    border-color:var(--accent-blue-dark);
+    background:#E9EFFB;
+    box-shadow:0 2px 8px rgba(21,71,176,.35);
+  }
+  .pdf-thumb .pdf-thumb-icon{
+    width:52px;
+    height:52px;
+    border-radius:8px;
+    overflow:hidden;
+    margin:0 auto 6px;
+    box-shadow:0 1px 4px rgba(0,0,0,.15);
+    background:var(--accent-blue);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:4px;
+  }
+  .pdf-thumb .pdf-thumb-icon img{
+    width:80%;
+    height:80%;
+    object-fit:contain;
+    display:block;
+    border-radius:4px;
+  }
+  .pdf-thumb .pdf-thumb-label{
+    font-family:var(--font-mono);
+    font-size:9px;
+    font-weight:700;
+    color:var(--graphite);
+    line-height:1.3;
+    letter-spacing:.2px;
+  }
+  #pdfScrollBar{
+    height:100%;
+    background:linear-gradient(90deg,var(--accent-blue-dark),var(--accent-blue));
+    border-radius:4px;
+    width:30%;
+    margin-left:0%;
+    transition:margin-left .1s;
+  }
+  #pdfNaslov{
+    text-align:center;
+    font-family:var(--font-mono);
+    font-size:12px;
+    font-weight:700;
+    color:var(--accent-blue-dark);
+    margin:14px 0 10px;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+  }
+  .pdf-frame-wrap{
+    border-radius:8px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:0 4px 15px rgba(13,13,13,.06);
+  }
+  @media (max-width:640px){
+    .stat-grid{ grid-template-columns:repeat(2,1fr); }
+  }
+  .placeholder{
+    max-width:520px;
+    text-align:center;
+  }
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:11px;
+    font-weight:600;
+    color:var(--accent-blue);
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  h1{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:clamp(24px,6vw,32px);
+    line-height:1.15;
+    margin:0 0 18px;
+    text-transform:uppercase;
+  }
+  h1 span{ color:var(--accent-blue); }
+  p{
+    font-size:14px;
+    line-height:1.65;
+    color:var(--graphite-soft);
+    margin:0 0 26px;
+  }
+  .cta-button{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--accent-blue);
+    color:var(--paper);
+    text-decoration:none;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:.4px;
+    text-transform:uppercase;
+    padding:16px 28px;
+    border-radius:10px;
+    transition:transform .18s ease, background .18s ease;
+  }
+  .cta-button:hover{
+    background:var(--accent-blue-dark);
+    transform:translateY(-2px);
+  }
+
+  footer{
+    text-align:center;
+    padding:20px;
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    color:var(--grey);
+    border-top:1px solid var(--line);
+  }
+
+
+  .mk-prod-qty-options{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    align-items:center;
+  }
+  .mk-qty-pill{
+    background:var(--paper);
+    border:1.5px solid var(--line);
+    color:var(--graphite);
+    cursor:pointer;
+    font-family:var(--font-mono);
+    font-size:11px;
+    font-weight:700;
+    padding:6px 12px;
+    border-radius:20px;
+    transition:border-color .15s ease, color .15s ease, background .15s ease;
+  }
+  .mk-qty-pill:hover{ border-color:var(--accent-blue); color:var(--accent-blue); background:#E9EFFB; }
+  .mk-qty-pill.selected{
+    background:var(--accent-blue) !important;
+    border-color:var(--accent-blue) !important;
+    color:#fff !important;
+  }
+  .mk-prod-add-custom{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-top:2px;
+  }
+  .mk-prod-qty-input{
+    width:52px;
+    font-family:var(--font-mono);
+    font-size:13px;
+    text-align:center;
+    border:1.5px solid var(--line);
+    border-radius:6px;
+    padding:7px 4px;
+    outline:none;
+  }
+  .mk-prod-add-btn{
+    background:var(--accent-blue);
+    color:var(--paper);
+    border:none;
+    padding:8px 16px;
+    border-radius:8px;
+    font-family:var(--font-mono);
+    font-size:11px;
+    font-weight:700;
+    cursor:pointer;
+    letter-spacing:.3px;
+  }
+  .mk-prod-add-btn:hover{ background:var(--accent-blue-dark); }
+  .mk-prod-interval-select{
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--graphite);
+    border:1.5px solid var(--line);
+    border-radius:6px;
+    padding:7px 6px;
+    outline:none;
+  }
+  .mk-topic-dropdown{ position:relative; }
+  .mk-topic-dropdown summary{
+    list-style:none; cursor:pointer;
+    font-family:var(--font-body); font-size:14px; color:var(--graphite-soft);
+    background:#FAFAFA; border:1.5px solid var(--line); border-radius:8px;
+    padding:11px 34px 11px 13px; outline:none; position:relative;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .mk-topic-dropdown summary::-webkit-details-marker{ display:none; }
+  .mk-topic-dropdown summary::after{
+    content:""; position:absolute; right:14px; top:50%; width:10px; height:10px; margin-top:-6px;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%234A4A4A' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat:no-repeat; transition:transform .15s ease;
+  }
+  .mk-topic-dropdown[open] summary::after{ transform:rotate(180deg); }
+  .mk-topic-dropdown[open] summary{ border-color:var(--accent-blue); background:var(--paper); }
+  .mk-topic-dropdown summary.has-selection{ color:var(--graphite); font-weight:600; }
+  .mk-topic-list{
+    margin-top:6px; max-height:280px; overflow-y:auto;
+    background:#FAFAFA; border:1.5px solid var(--line); border-radius:8px;
+    padding:6px; display:flex; flex-direction:column; gap:2px;
+  }
+  .mk-topic-item{
+    display:flex; align-items:center; gap:9px;
+    font-family:var(--font-body) !important; font-size:13px !important;
+    font-weight:400 !important; text-transform:none !important;
+    color:var(--graphite-soft); padding:8px; border-radius:6px;
+    cursor:pointer; transition:background .12s ease;
+  }
+  .mk-topic-item:hover{ background:#E9EFFB; }
+  .mk-topic-item input[type="checkbox"]{ width:16px; height:16px; accent-color:var(--accent-blue); cursor:pointer; flex-shrink:0; }
+  .mk-form-note{
+    text-align:center; font-family:var(--font-mono); font-size:10.5px; color:var(--grey); margin-top:10px;
+  }
+  .mk-form-note-ex{
+    text-align:left; font-family:var(--font-body); font-size:12px; line-height:1.6;
+    color:var(--graphite-soft); background:#FAFAFA; border:1px solid var(--line);
+    border-radius:8px; padding:12px 14px; margin-top:14px;
+  }
+  .mk-form-note-ex strong{ color:var(--graphite); }
+  .mk-form-note-customs{
+    text-align:left; font-family:var(--font-body); font-size:12px; line-height:1.65;
+    color:var(--graphite-soft); background:#EEF3FC; border:1px solid var(--accent-blue);
+    border-radius:8px; padding:12px 14px; margin-top:10px;
+  }
+  .mk-form-note-customs strong{ color:var(--accent-blue-dark); }
+  .mk-order-row{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 0;
+    border-bottom:1px solid var(--line);
+    flex-wrap:wrap;
+  }
+  .mk-order-row:last-child{ border-bottom:none; }
+  .mk-order-row-name{
+    flex:1;
+    min-width:0;
+    font-family:var(--font-body);
+    font-size:13px;
+    color:var(--graphite);
+  }
+  .mk-order-row-code{
+    font-family:var(--font-mono);
+    font-size:10px;
+    color:var(--grey);
+  }
+  .mk-order-qty-input{
+    width:52px;
+    font-family:var(--font-mono);
+    font-size:13px;
+    text-align:center;
+    border:1.5px solid var(--line);
+    border-radius:6px;
+    padding:5px 4px;
+  }
+  .mk-order-remove-btn{
+    background:none;
+    border:1.5px solid var(--line);
+    color:var(--grey);
+    width:28px;
+    height:28px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .mk-order-remove-btn:hover{ border-color:var(--accent); color:var(--accent); }
+
+  /* PRETRAGA PROIZVODA */
+  .order-section{
+    grid-column:1 / -1;
+    margin:6px 0 18px;
+    padding:16px;
+    background:#FAFAFA;
+    border:1.5px solid var(--line);
+    border-radius:10px;
+  }
+  .order-section-label{
+    display:block;
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.4px;
+    text-transform:uppercase;
+    color:var(--graphite);
+    margin-bottom:6px;
+  }
+  #mkProdSearch{
+    width:100%;
+    box-sizing:border-box;
+    font-family:var(--font-body);
+    font-size:14px;
+    color:var(--graphite);
+    background:#FAFAFA;
+    border:1.5px solid var(--line);
+    border-radius:8px;
+    padding:12px 14px;
+    outline:none;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  #mkProdSearch:focus{ border-color:var(--accent-blue); background:var(--paper); }
+  .mk-prod-results{
+    margin-top:10px;
+    max-height:380px;
+    overflow-y:auto;
+  }
+  .mk-prod-row{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    padding:12px 4px;
+    border-bottom:1px solid var(--line);
+  }
+  .mk-prod-row:last-child{ border-bottom:none; }
+  .mk-prod-name{
+    font-family:var(--font-body);
+    font-weight:600;
+    font-size:13.5px;
+    color:var(--graphite);
+    margin-bottom:2px;
+  }
+  .mk-prod-meta{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    color:var(--grey);
+    line-height:1.5;
+  }
+  .mk-prod-meta b{ color:var(--graphite-soft); font-weight:700; }
+  .mk-prod-empty{
+    padding:14px 4px;
+    font-family:var(--font-mono);
+    font-size:12px;
+    color:var(--grey);
+  }
+
+
+  /* ===== MOBILNA PRILAGODBA ===== */
+  @media(max-width:768px){
+    .letter{ padding:28px 16px 8px; }
+    .eyebrow{ font-size:11px; }
+    h1{ font-size:clamp(20px,5vw,28px) !important; }
+    .banner{ max-width:100%; }
+    .pdf-wrap{ padding:8px 16px 40px; }
+    .pdf-card{ padding:14px; }
+    .pdf-thumb{ width:90px; padding:10px 6px; }
+    .pdf-thumb .pdf-thumb-icon{ width:44px; height:44px; }
+    .pdf-thumb .pdf-thumb-label{ font-size:8px; }
+    .pdf-frame-wrap iframe{ height:350px !important; }
+    .video-frame-wrap{ padding-top:56.25%; }
+    .cta-button{ font-size:13px; padding:14px 20px; }
+    footer{ font-size:10px; padding:18px 16px; }
+  }
+  @media(max-width:480px){
+    .letter{ padding:20px 12px 8px; }
+    .stat-grid{ grid-template-columns:repeat(2,1fr) !important; gap:8px; }
+    .stat-card{ padding:14px 10px; }
+    .stat-num{ font-size:clamp(16px,4vw,22px) !important; }
+    .stat-label{ font-size:9px; }
+    .subhead{ font-size:16px !important; padding-left:10px; }
+    .program-list li{ font-size:13px; }
+    .pdf-frame-wrap iframe{ height:280px !important; }
+    .pdf-thumb{ width:80px; }
+  }
+
+
+  /* ===== MOBILNI ZOOM PRILAGODBA ===== */
+  @media only screen and (max-width:820px){
+    * { box-sizing:border-box !important; }
+    .strip{
+      width:100% !important;
+      zoom:0.40;
+      -moz-transform:scale(0.40);
+      -moz-transform-origin:top center;
+    }
+  }
+
+</style>
+<script src="config.js"></script>
+</head>
+<body>
+
+<div class="strip">
+
+  <a class="topbar-back-only" href="index.html">← Početna stranica</a>
+
+  <img class="banner" src="https://i.imgur.com/52emoWf.png" alt="Beorol Prima">
+
+
+  <div class="letter">
+    <div class="eyebrow">Beorol Prima · Private Label</div>
+    <h1>Beorol Prima – <span>private label proizvodnja</span></h1>
+
+    <p>
+      Beorol Prima je vodeći proizvođač alata za farbanje i dekoraciju u
+      regiji jugoistočne Europe, s dugogodišnjim iskustvom u izradi
+      proizvoda pod robnim markama vodećih svjetskih trgovačkih lanaca. Na
+      10.000 m² proizvodnog prostora, u četiri vlastita pogona, više od 140
+      zaposlenih svakodnevno proizvodi preko 350 različitih artikala.
+    </p>
+    <p>
+      Naš private label program dokazan je kroz dugogodišnju suradnju s
+      partnerima diljem Europe i šire, koji su prepoznali kvalitetu,
+      pouzdanost i fleksibilnost proizvodnje kao ključne prednosti.
+      Poslovanje je usklađeno sa standardima ISO 9001, ISO 14001 i ISO
+      45001, uz certificirane CE proizvode i partnerstvo s Bureau Veritas.
+    </p>
+    <p>
+      Bez obzira radi li se o postojećem asortimanu ili potpuno novoj
+      robnoj marki, uvijek smo spremni prihvatiti nove projekte i izazove –
+      i razviti vlastiti brend za svakog sljedećeg partnera, baš kao što
+      smo to učinili za brojne druge diljem tržišta.
+    </p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-num">10.000 m²</div>
+        <div class="stat-label">Proizvodnog prostora</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Vlastita pogona</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">140+</div>
+        <div class="stat-label">Zaposlenih</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">350+</div>
+        <div class="stat-label">Artikala</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+    <h3 class="subhead">Naše proizvodne mogućnosti</h3>
+    <ul class="program-list">
+      <li><strong>Valjci i pribor za farbanje</strong> – valjci za sve vrste boja i premaza (disperzivne, akrilne, lateks, poliuretanske, epoksidne), drške, mrežice i kade</li>
+      <li><strong>Kistovi za farbanje</strong> – univerzalni, akrilni, kistovi za drvo i metal te specijalizirani kistovi za dekorativne radove</li>
+      <li><strong>Ljepljive trake</strong> – maskirne trake za zidove i stropove, fasadne trake, washi trake, trake za vrata i prozore</li>
+      <li><strong>Alat za oblaganje pločicama</strong> – križići, klinovi i sustav za niveliranje pločica, PVC posude i drvene ljestve</li>
+    </ul>
+  </div>
+
+  <div class="video-wrap pdf-wrap" style="padding-bottom:8px;">
+    <hr class="divider" style="margin:0 0 24px;">
+    <h3 class="subhead">Video predstavljanje</h3>
+
+    <div class="video-card pdf-card">
+      <div class="video-frame-wrap">
+        <video controls playsinline preload="metadata">
+          <source src="https://ia803103.us.archive.org/8/items/beorol-d.o.o.-korportaivni-video/Beorol%20d.o.o.%20-%20korportaivni%20video.mp4" type="video/mp4">
+          Vaš preglednik ne podržava HTML5 video. <a href="https://ia803103.us.archive.org/8/items/beorol-d.o.o.-korportaivni-video/Beorol%20d.o.o.%20-%20korportaivni%20video.mp4">Preuzmite video ovdje</a>.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div class="pdf-wrap">
+    <hr class="divider" style="margin:0 0 24px;">
+    <h3 class="subhead">Pogledajte i preuzmite naše kataloge</h3>
+
+    <div class="pdf-card">
+      <div id="pdfTrack" style="display:flex;gap:8px;overflow-x:scroll;padding-bottom:8px;-webkit-overflow-scrolling:touch;">
+
+        <div class="pdf-thumb active" id="pdf-thumb-0" onclick="otvoriPdf(0)">
+          <div class="pdf-thumb-icon"><img src="data:image/jpeg;base64,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" alt="Beorol Prima"></div>
+          <div class="pdf-thumb-label">Katalog<br>proizvodnje HR</div>
+        </div>
+
+        <div class="pdf-thumb" id="pdf-thumb-1" onclick="otvoriPdf(1)">
+          <div class="pdf-thumb-icon"><img src="data:image/jpeg;base64,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" alt="Beorol Prima"></div>
+          <div class="pdf-thumb-label">Katalog<br>proizvodnje ENG</div>
+        </div>
+
+        <div class="pdf-thumb" id="pdf-thumb-2" onclick="otvoriPdf(2)">
+          <div class="pdf-thumb-icon"><img src="data:image/jpeg;base64,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" alt="Beorol Prima"></div>
+          <div class="pdf-thumb-label">MOQ<br>Production List</div>
+        </div>
+
+        <div class="pdf-thumb" id="pdf-thumb-3" onclick="otvoriPdf(3)">
+          <div class="pdf-thumb-icon"><img src="data:image/jpeg;base64,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" alt="Beorol Prima"></div>
+          <div class="pdf-thumb-label">General Terms<br>& Conditions</div>
+        </div>
+
+        <div class="pdf-thumb" id="pdf-thumb-4" onclick="otvoriPdf(4)">
+          <div class="pdf-thumb-icon"><img src="data:image/jpeg;base64,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" alt="Beorol Prima"></div>
+          <div class="pdf-thumb-label">Certifikat<br>ISO 9001:2015</div>
+        </div>
+
+        <div class="pdf-thumb" id="pdf-thumb-5" onclick="otvoriPdf(5)">
+          <div class="pdf-thumb-icon"><img src="data:image/jpeg;base64,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" alt="Beorol Prima"></div>
+          <div class="pdf-thumb-label">Certifikat<br>EMS ISO 14001:2015</div>
+        </div>
+
+        <div class="pdf-thumb" id="pdf-thumb-6" onclick="otvoriPdf(6)">
+          <div class="pdf-thumb-icon"><img src="data:image/jpeg;base64,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" alt="Beorol Prima"></div>
+          <div class="pdf-thumb-label">Certifikat<br>OHSAS 45001:2018</div>
+        </div>
+
+        <div class="pdf-thumb" id="pdf-thumb-7" onclick="otvoriPdf(7)">
+          <div class="pdf-thumb-icon"><img src="data:image/jpeg;base64,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" alt="Beorol Prima"></div>
+          <div class="pdf-thumb-label">Certifikat<br>CE</div>
+        </div>
+
+        <div class="pdf-thumb" id="pdf-thumb-8" onclick="otvoriPdf(8)">
+          <div class="pdf-thumb-icon"><img src="data:image/jpeg;base64,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" alt="Beorol Prima"></div>
+          <div class="pdf-thumb-label">Certifikat<br>FSC CoC</div>
+        </div>
+
+      </div>
+
+      <!-- SCROLL INDIKATOR -->
+      <div style="height:6px;background:#E4E9F2;border-radius:4px;margin-top:8px;overflow:hidden;">
+        <div id="pdfScrollBar"></div>
+      </div>
+
+      <!-- NAZIV AKTIVNOG DOKUMENTA -->
+      <div id="pdfNaslov"></div>
+
+      <!-- PDF IFRAME VIEWER -->
+      <div class="pdf-frame-wrap">
+        <iframe id="pdfViewer" src="" style="width:100%;height:500px;border:none;" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  var pdfDokumenti = [
+    { naziv: 'Katalog proizvodnje (HR)', driveId: '14W9bqSr_RT__Jf0eAkjjnm4qN_S0Qrsx' },
+    { naziv: 'Katalog proizvodnje (ENG)', driveId: '1phnexx8Is_Qmh4rcZpLy_oByOnKMde9h' },
+    { naziv: 'MOQ Production List 2026', driveId: '1EAAHcd7VmcrMSZSbwLEP0hdPafPPpZnS' },
+    { naziv: 'General Terms & Conditions 2026', driveId: '1u0YkoRPSZ0fq4yDnIkjBzdyxuCMYtNpw' },
+    { naziv: 'Certifikat ISO 9001:2015', archiveId: 'fsc-coc-sertifikat_202608', archiveFile: '9001.2015 - Sertifikat' },
+    { naziv: 'Certifikat EMS ISO 14001:2015', archiveId: 'fsc-coc-sertifikat_202608', archiveFile: 'EMS 14001.2015 - Sertifikat' },
+    { naziv: 'Certifikat OHSAS 45001:2018', archiveId: 'fsc-coc-sertifikat_202608', archiveFile: 'OHSAS 4500.2018 - Sertifikat' },
+    { naziv: 'Certifikat CE', archiveId: 'fsc-coc-sertifikat_202608', archiveFile: 'CE - Sertifikat' },
+    { naziv: 'Certifikat FSC CoC', archiveId: 'fsc-coc-sertifikat_202608', archiveFile: 'FSC Coc - Sertifikat' }
+  ];
+
+  var aktivniPdf = 0;
+
+  function otvoriPdf(index){
+    aktivniPdf = index;
+    var doc = pdfDokumenti[index];
+    var src;
+    if(doc.driveId){
+      src = 'https://drive.google.com/file/d/' + doc.driveId + '/preview';
+    } else {
+      src = doc.archiveFile
+        ? 'https://archive.org/embed/' + doc.archiveId + '/' + encodeURIComponent(doc.archiveFile)
+        : 'https://archive.org/embed/' + doc.archiveId;
+    }
+    document.getElementById('pdfViewer').src = src;
+    document.getElementById('pdfNaslov').textContent = doc.naziv;
+
+    for(var i=0;i<pdfDokumenti.length;i++){
+      var thumb = document.getElementById('pdf-thumb-'+i);
+      if(!thumb) continue;
+      if(i === index){ thumb.classList.add('active'); }
+      else{ thumb.classList.remove('active'); }
+    }
+  }
+
+  var pdfTrack = document.getElementById('pdfTrack');
+  var pdfBar = document.getElementById('pdfScrollBar');
+  if(pdfTrack && pdfBar){
+    pdfTrack.addEventListener('scroll', function(){
+      var max = pdfTrack.scrollWidth - pdfTrack.clientWidth;
+      if(max <= 0) return;
+      pdfBar.style.marginLeft = (pdfTrack.scrollLeft / max * 70) + '%';
+    });
+  }
+
+  otvoriPdf(0);
+  </script>
+
+  <div class="pdf-wrap">
+    <hr class="divider" style="margin:0 0 24px;">
+    <h3 class="subhead" style="text-transform:none;">Vaš Private Label projekt počinje ovdje</h3>
+    <p style="font-size:15px;line-height:1.5;color:var(--graphite-soft);margin:0 0 20px;font-family:var(--font-body);">Recite nam što želite – mi ćemo provjeriti mogućnosti</p>
+
+    <div class="pdf-card" style="border-color:var(--accent-blue);">
+      <p style="font-size:14px;line-height:1.6;color:var(--graphite-soft);margin:0 0 14px;">
+        Ovo je <strong>neobvezujući upit za izradu ponude</strong> za proizvode pod Vašom <strong>privatnom robnom markom (Private Label)</strong>.
+      </p>
+      <p style="font-size:14px;line-height:1.6;color:var(--graphite-soft);margin:0 0 14px;">
+        Podaci koje unesete pomoći će nam da što preciznije razumijemo Vaše potrebe – za koji ste asortiman zainteresirani, koje količine razmatrate te kakva su Vaša očekivanja vezana uz pakiranje, dizajn i razvoj proizvoda pod Vašim <strong>brendom</strong>.
+      </p>
+      <p style="font-size:14px;line-height:1.6;color:var(--graphite-soft);margin:0 0 14px;">
+        Ovaj upit ujedno služi i kao <strong>početni test interesa i izvedivosti potencijalne suradnje</strong>. Na temelju odabranih proizvoda i navedenih količina provjerit ćemo jesu li Vaše procijenjene prodajne količine usklađene s našim <strong>minimalnim proizvodnim količinama (MOQ)</strong> te postoji li odgovarajuća osnova za razvoj privatne robne marke unutar proizvodnog programa <strong>Beorol Prime</strong>.
+      </p>
+      <p style="font-size:14px;line-height:1.6;color:var(--graphite-soft);margin:0 0 14px;">
+        Cilj nam je već u početnoj fazi utvrditi koje su grupe proizvoda za Vas najzanimljivije i za koje proizvode možemo ponuditi optimalan model razvoja, proizvodnje, pakiranja i <em>brendiranja</em>.
+      </p>
+      <p style="font-size:14px;line-height:1.6;color:var(--graphite-soft);margin:0 0 14px;">
+        Nakon što pregledamo Vaš upit, možete očekivati naš <strong>povratni e-mail s dodatnim informacijama</strong>, a ovisno o iskazanom interesu i mogućnostima realizacije, možemo Vam predložiti i <strong>sastanak ili online razgovor</strong> na kojem ćemo detaljnije predstaviti mogućnosti proizvodnje, dostupne proizvode, MOQ količine, opcije pakiranja i dizajna, komercijalne uvjete te daljnje korake.
+      </p>
+      <p style="font-size:14px;line-height:1.6;color:var(--graphite-soft);margin:0 0 14px;">
+        Na temelju usuglašenih proizvoda i količina, <strong>Beorol Prima</strong> može pripremiti i individualnu ponudu prilagođenu Vašem projektu te je dostaviti na Vašu e-mail adresu u roku od najviše <strong>72 sata</strong> od završnog definiranja potrebnih podataka.
+      </p>
+      <p style="font-size:14px;line-height:1.6;color:var(--graphite-soft);margin:0 0 18px;">
+        Slanjem ovog upita <strong>ne preuzimate nikakvu obvezu kupnje</strong>. Upit ne predstavlja narudžbu, već služi isključivo kao osnova za procjenu mogućnosti razvoja Vaše privatne robne marke, pripremu ponude i daljnji dogovor.
+      </p>
+
+      <div id="mkFormMsg" style="display:none;padding:18px;border-radius:10px;background:#E9EFFB;color:var(--accent-blue-dark);font-family:var(--font-display);font-weight:600;font-size:16px;text-align:center;margin-bottom:14px;"></div>
+
+      <div id="mkFormFields" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+
+        <div style="grid-column:1/-1;">
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Poslovni subjekt *</label>
+          <input id="mkBusiness" type="text" required style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;box-sizing:border-box;">
+        </div>
+
+        <div>
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">OIB poslovnog subjekta / VAT broj</label>
+          <input id="mkOIB" type="text" style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Adresa poslovnog subjekta</label>
+          <input id="mkAddress" type="text" style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;box-sizing:border-box;">
+        </div>
+
+        <div>
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Grad</label>
+          <input id="mkCity" type="text" style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Poštanski broj</label>
+          <input id="mkZip" type="text" style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;box-sizing:border-box;">
+        </div>
+
+        <div style="grid-column:1/-1;">
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Županija</label>
+          <select id="mkCounty" style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;background:#fff;box-sizing:border-box;">
+            <option value="">Odaberite županiju...</option>
+            <option>Zagrebačka</option><option>Krapinsko-zagorska</option><option>Sisačko-moslavačka</option>
+            <option>Karlovačka</option><option>Varaždinska</option><option>Koprivničko-križevačka</option>
+            <option>Bjelovarsko-bilogorska</option><option>Primorsko-goranska</option><option>Ličko-senjska</option>
+            <option>Virovitičko-podravska</option><option>Požeško-slavonska</option><option>Brodsko-posavska</option>
+            <option>Zadarska</option><option>Osječko-baranjska</option><option>Šibensko-kninska</option>
+            <option>Vukovarsko-srijemska</option><option>Splitsko-dalmatinska</option><option>Istarska</option>
+            <option>Dubrovačko-neretvanska</option><option>Međimurska</option><option>Grad Zagreb</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Ime *</label>
+          <input id="mkName" type="text" required style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Prezime *</label>
+          <input id="mkSurname" type="text" required style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;box-sizing:border-box;">
+        </div>
+
+        <div>
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Email *</label>
+          <input id="mkEmail" type="email" required style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Broj mobitela</label>
+          <input id="mkPhone" type="tel" style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;box-sizing:border-box;">
+        </div>
+
+        <div style="grid-column:1/-1;">
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Planirana učestalost naručivanja</label>
+          <select id="mkFrequency" style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;background:#fff;box-sizing:border-box;">
+            <option value="">Odaberite učestalost...</option>
+            <option>Tjedno</option>
+            <option>Mjesečno</option>
+            <option>Kvartalno</option>
+            <option>Polugodišnje</option>
+            <option>Godišnje</option>
+            <option>Po dogovoru</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Ime Vaše robne marke</label>
+          <input id="mkBrand" type="text" style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Ime projekta</label>
+          <input id="mkProject" type="text" style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;box-sizing:border-box;">
+        </div>
+
+        <div style="grid-column:1/-1;position:relative;">
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Odaberite kategoriju proizvoda koju želite uključiti u razvoj Vaše Private Label marke:</label>
+          <div id="mkProdDropdown" onclick="toggleProdDropdown()" style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;background:#fff;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;">
+            <span id="mkProdLabel" style="color:var(--graphite-soft);">Odaberite proizvode...</span>
+            <span style="font-size:12px;color:var(--graphite-soft);">▼</span>
+          </div>
+          <div id="mkProdList" style="display:none;position:absolute;left:0;right:0;top:100%;z-index:50;background:#fff;border:1.5px solid var(--accent-blue);border-radius:0 0 8px 8px;box-shadow:0 6px 16px rgba(0,0,0,.12);max-height:220px;overflow-y:auto;">
+            <label style="display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer;border-bottom:1px solid var(--line);font-family:var(--font-body);font-size:14px;color:var(--graphite);" onmouseover="this.style.background='#F0F4FB'" onmouseout="this.style.background='#fff'">
+              <input type="checkbox" class="mkProdCb" value="Valjci i pribor za farbanje" onchange="updateProdLabel()" style="width:18px;height:18px;accent-color:var(--accent-blue);"> Valjci i pribor za farbanje
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer;border-bottom:1px solid var(--line);font-family:var(--font-body);font-size:14px;color:var(--graphite);" onmouseover="this.style.background='#F0F4FB'" onmouseout="this.style.background='#fff'">
+              <input type="checkbox" class="mkProdCb" value="Kistovi za farbanje" onchange="updateProdLabel()" style="width:18px;height:18px;accent-color:var(--accent-blue);"> Kistovi za farbanje
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer;border-bottom:1px solid var(--line);font-family:var(--font-body);font-size:14px;color:var(--graphite);" onmouseover="this.style.background='#F0F4FB'" onmouseout="this.style.background='#fff'">
+              <input type="checkbox" class="mkProdCb" value="Ljepljive trake" onchange="updateProdLabel()" style="width:18px;height:18px;accent-color:var(--accent-blue);"> Ljepljive trake
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer;font-family:var(--font-body);font-size:14px;color:var(--graphite);" onmouseover="this.style.background='#F0F4FB'" onmouseout="this.style.background='#fff'">
+              <input type="checkbox" class="mkProdCb" value="Alat za oblaganje pločicama" onchange="updateProdLabel()" style="width:18px;height:18px;accent-color:var(--accent-blue);"> Alat za oblaganje pločicama
+            </label>
+          </div>
+        </div>
+
+                <div style="grid-column:1/-1;">
+          <div class="order-section">
+            <span class="order-section-label">Pretražite proizvode i dodajte u upit</span>
+            <p style="font-size:12px;line-height:1.5;color:var(--graphite-soft);margin:0 0 8px;">Pretražite po šifri ili nazivu, pa odaberite količinu.</p>
+            <p style="font-size:11px;line-height:1.5;color:var(--accent-blue);margin:0 0 12px;font-family:var(--font-mono);font-weight:700;">MOQ 1 = samo PL deklaracija &nbsp;|&nbsp; MOQ 2 = PL deklaracija + boja plastike</p>
+            <input type="text" id="mkProdSearch" placeholder="Pretraži po šifri ili nazivu proizvoda…" autocomplete="off">
+            <div class="mk-prod-results" id="mkProdResults"></div>
+          </div>
+        </div>
+
+        <div style="grid-column:1/-1;">
+          <div class="order-section" style="border-color:var(--accent-blue);">
+            <span class="order-section-label">Pregled upita (<span id="mkOrderCount">0</span> proizvoda)</span>
+            <div id="mkOrderEmpty" style="font-family:var(--font-mono);font-size:11px;color:var(--grey);padding:8px 0;">Još niste dodali nijedan proizvod.</div>
+            <div id="mkOrderList"></div>
+          </div>
+        </div>
+
+        <div style="grid-column:1/-1;">
+          <div class="mk-order-review" id="mkOrderReview" style="display:none;background:#EEF3FC;border:1.5px solid var(--accent-blue);border-radius:10px;padding:16px 18px;margin:6px 0 18px;">
+            <h4 style="font-family:var(--font-display);font-weight:700;font-size:14px;text-transform:uppercase;color:var(--accent-blue-dark);margin:0 0 10px;">Pregled Vašeg upita</h4>
+            <div id="mkOrderReviewContent"></div>
+          </div>
+        </div>
+
+        <div style="grid-column:1/-1;">
+          <button type="button" id="mkReviewBtn" style="display:flex;align-items:center;justify-content:center;width:100%;background:var(--accent-blue);color:var(--paper);border:none;cursor:pointer;font-family:var(--font-display);font-weight:700;font-size:15px;letter-spacing:.4px;text-transform:uppercase;padding:16px 24px;border-radius:10px;margin-top:6px;transition:background .18s ease;">Zaključi upit</button>
+          <button type="button" id="mkEditBtn" style="display:none;width:100%;background:var(--graphite);border:1.5px solid var(--graphite);color:var(--paper);cursor:pointer;font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:12px 20px;border-radius:10px;margin-top:8px;">← Ispravite Vaš upit</button>
+        </div>
+
+        <div id="mkPostReview" style="grid-column:1/-1;margin-top:28px;padding-top:20px;border-top:1px solid var(--line);">
+
+<div style="grid-column:1/-1;">
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Vaša pitanja za nas</label>
+          <details class="mk-topic-dropdown" id="mkTopicDropdown">
+            <summary id="mkTopicSummary">Odaberite teme koje Vas zanimaju…</summary>
+            <div class="mk-topic-list">
+              <label class="mk-topic-item"><input type="checkbox" value="Cjenovna politika i količinski popusti"> Cjenovna politika i količinski popusti</label>
+              <label class="mk-topic-item"><input type="checkbox" value="Minimalna količina narudžbe (MOQ)"> Minimalna količina narudžbe (MOQ)</label>
+              <label class="mk-topic-item"><input type="checkbox" value="Uvjeti i rokovi plaćanja"> Uvjeti i rokovi plaćanja</label>
+              <label class="mk-topic-item"><input type="checkbox" value="Private label - razvoj marke i brendiranje"> Private label - razvoj marke i brendiranje</label>
+              <label class="mk-topic-item"><input type="checkbox" value="Private label - dizajn i pakiranje"> Private label - dizajn i pakiranje</label>
+              <label class="mk-topic-item"><input type="checkbox" value="EX WORKS paritet i organizacija transporta"> EX WORKS paritet i organizacija transporta</label>
+              <label class="mk-topic-item"><input type="checkbox" value="Carinski i porezni aspekti uvoza"> Carinski i porezni aspekti uvoza</label>
+              <label class="mk-topic-item"><input type="checkbox" value="Rokovi isporuke i proizvodni kapaciteti"> Rokovi isporuke i proizvodni kapaciteti</label>
+              <label class="mk-topic-item"><input type="checkbox" value="Certifikati i sukladnost"> Certifikati i sukladnost</label>
+              <label class="mk-topic-item"><input type="checkbox" value="Reference postojećih partnera"> Reference postojećih partnera</label>
+            </div>
+          </details>
+        </div>
+
+        <div style="grid-column:1/-1;">
+          <label style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--graphite);display:block;margin-bottom:4px;">Poruka</label>
+          <textarea id="mkMessage" rows="4" placeholder="Napomena, dodatna pitanja ili detalji o upitu…" style="width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body);font-size:14px;resize:vertical;box-sizing:border-box;"></textarea>
+        </div>
+
+        <div style="grid-column:1/-1;text-align:center;margin-top:6px;">
+          <button id="mkSendBtn" onclick="posaljiMkFormu()" style="background:var(--graphite);color:var(--paper);border:none;padding:16px 36px;border-radius:10px;font-family:var(--font-display);font-weight:700;font-size:15px;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;transition:background .15s ease;width:100%;">✓ Potvrdi i pošalji upit</button>
+        </div>
+        </div><!-- /mkPostReview -->
+      </div>
+
+      <div class="mk-form-note">Ovo je upit za ponudu — ponudu šaljemo u roku od maksimalno 72 sata</div>
+      <div class="mk-form-note-ex">
+        Sve naše ponude formiramo isključivo na paritetu <strong>EX WORKS</strong>.
+        Po potrebi možemo organizirati povoljan logistički transport
+        do Vaše adrese, a ta se usluga fakturira zasebno.
+      </div>
+      <div class="mk-form-note-customs">
+        <strong>Napomena o uvoznim troškovima:</strong> zahvaljujući
+        Sporazumu o stabilizaciji i pridruživanju (SSP) između EU-a i
+        Srbije, industrijska roba porijeklom iz Srbije — uz standardnu
+        popratnu dokumentaciju o podrijetlu koju dostavljamo uz svaku
+        pošiljku — ulazi u Hrvatsku <strong>bez plaćanja carine</strong>.
+        U praksi to znači da Vas kao uvoznika najčešće očekuje samo
+        redovan <strong>PDV od 25%</strong>, bez dodatnih carinskih
+        davanja — <strong>PDV je prolazna stavka</strong> i ne
+        predstavlja stvarni trošak, jer ga kao registrirani obveznik
+        PDV-a u cijelosti odbijate (ulazni PDV) pri sljedećoj poreznoj
+        prijavi te je porezno <strong>neutralan</strong>.
+        <strong>Kod izračuna Vaše nabavne cijene stoga realno trebate
+        uzeti u obzir samo našu prodajnu cijenu proizvoda i trošak
+        transporta — Vaši troškovi uvoza time ostaju jednostavni i
+        predvidivi.</strong>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  var prodOpen = false;
+  function toggleProdDropdown(){
+    prodOpen = !prodOpen;
+    document.getElementById('mkProdList').style.display = prodOpen ? 'block' : 'none';
+    var dd = document.getElementById('mkProdDropdown');
+    if(prodOpen){
+      dd.style.borderRadius = '8px 8px 0 0';
+      dd.style.borderColor = 'var(--accent-blue)';
+    } else {
+      dd.style.borderRadius = '8px';
+      dd.style.borderColor = 'var(--line)';
+    }
+  }
+  function updateProdLabel(){
+    var checked = document.querySelectorAll('.mkProdCb:checked');
+    var label = document.getElementById('mkProdLabel');
+    if(checked.length === 0){
+      label.textContent = 'Odaberite proizvode...';
+      label.style.color = 'var(--graphite-soft)';
+    } else {
+      var names = [];
+      checked.forEach(function(cb){ names.push(cb.value); });
+      label.textContent = names.join(', ');
+      label.style.color = 'var(--graphite)';
+    }
+  }
+  document.addEventListener('click', function(e){
+    var dd = document.getElementById('mkProdDropdown');
+    var list = document.getElementById('mkProdList');
+    if(dd && list && !dd.contains(e.target) && !list.contains(e.target)){
+      prodOpen = false;
+      list.style.display = 'none';
+      dd.style.borderRadius = '8px';
+      dd.style.borderColor = 'var(--line)';
+    }
+  });
+  </script>
+
+  
+
+
+  
+  <div class="pdf-wrap" style="padding-bottom:40px;">
+    <hr class="divider" style="margin:0 0 24px;">
+    <div style="background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:28px 24px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.04);">
+      <p style="font-size:14px;line-height:1.7;color:var(--graphite-soft);margin:0 0 16px;">
+        Hvala Vam što ste izdvojili vrijeme i upoznali se s Beorol Prima proizvodnim programom. Bez obzira jeste li se već odlučili za suradnju ili Vam trebaju dodatne informacije, tu smo za sva pitanja — javite nam se putem forme iznad ili izravno preko kontakt kanala u izborniku dolje lijevo. <strong style="color:var(--graphite);">Veselimo se mogućoj poslovnoj suradnji.</strong>
+      </p>
+      <a href="index.html" style="display:inline-block;font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--accent-blue-dark);text-decoration:none;border-bottom:1.5px solid var(--accent-blue);padding-bottom:2px;">← Natrag na naslovnicu</a>
+    </div>
+  </div>
+
+  <footer>© 2026 Horizont LHB d.o.o. Osijek · Sva prava zadržana</footer>
+
+</div>
+
+<!-- ========== BEOROL IZBORNIK WIDGET ========== -->
+<style>
+  #bwMainBtn{
+    position:fixed;left:70px;bottom:60px;z-index:9998;
+    width:115px;height:115px;border-radius:50%;
+    cursor:pointer;
+    background:transparent;
+    box-shadow:0 6px 18px rgba(13,13,13,.3);
+    display:flex;align-items:center;justify-content:center;
+    transition:transform .15s ease;
+    overflow:hidden;
+  }
+  #bwMainBtn:hover{ transform:scale(1.05); }
+  #bwMainBtn img{ width:100%;height:100%;object-fit:cover;display:block; }
+
+  .bw-glow{
+    position:fixed;left:70px;bottom:60px;z-index:9997;
+    width:115px;height:115px;border-radius:50%;
+    pointer-events:none;
+  }
+  .bw-glow-left{
+    clip-path:inset(-30px 50% -30px -30px);
+    animation:bwPulseRed 2.4s ease-in-out infinite;
+  }
+  .bw-glow-right{
+    clip-path:inset(-30px -30px -30px 50%);
+    animation:bwPulseBlue 2.4s ease-in-out infinite;
+  }
+  @keyframes bwPulseRed{
+    0%,100%{ box-shadow:0 0 0 0 rgba(226,35,26,.55), 0 0 0 0 rgba(226,35,26,.3); }
+    50%{ box-shadow:0 0 0 8px rgba(226,35,26,.45), 0 0 0 16px rgba(226,35,26,.18); }
+  }
+  @keyframes bwPulseBlue{
+    0%,100%{ box-shadow:0 0 0 0 rgba(21,71,176,.55), 0 0 0 0 rgba(21,71,176,.3); }
+    50%{ box-shadow:0 0 0 8px rgba(21,71,176,.45), 0 0 0 16px rgba(21,71,176,.18); }
+  }
+
+  #bwMainMenu{
+    display:none;flex-direction:column;gap:10px;
+    position:fixed;left:70px;bottom:197px;z-index:9999;
+  }
+  .bw-subbtn{
+    display:flex;align-items:center;gap:9px;
+    padding:11px 18px;border-radius:50px;cursor:pointer;
+    font-family:var(--font-mono);font-size:11px;font-weight:700;
+    letter-spacing:.5px;text-transform:uppercase;
+    color:var(--paper);
+    box-shadow:0 4px 14px rgba(13,13,13,.28);
+    border:none;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .bw-subbtn:hover{ transform:translateX(3px); }
+  .bw-subbtn.bw-red{ background:var(--graphite); border:1px solid var(--accent); color:var(--paper); }
+  .bw-subbtn.bw-blue{ background:var(--graphite); border:1px solid var(--accent-blue); color:var(--paper); }
+  .bw-subbtn.bw-music-green{ background:#25D366; border:1px solid #25D366; color:var(--paper); }
+  .bw-subbtn.bw-music-red{ background:#cc0000; border:1px solid #cc0000; color:var(--paper); }
+  .bw-subbtn .bw-icon{ font-size:15px;line-height:1; }
+
+  .bw-popup{
+    display:none;
+    position:fixed;left:297px;bottom:60px;z-index:9999;
+    border:2px solid transparent;
+    border-radius:14px;
+    min-height:460px;
+    box-sizing:border-box;
+    background-image:
+      linear-gradient(180deg, var(--accent) 0%, #ffffff 50%, var(--accent-blue) 100%),
+      linear-gradient(180deg, #F2857D 0%, #ffffff 50%, #7DA3F2 100%);
+    background-origin:border-box;
+    background-clip:padding-box, border-box;
+    padding:16px;
+    min-width:210px;
+    box-shadow:0 10px 34px rgba(0,0,0,.45);
+  }
+  #bwKontaktPopup{
+    background-image:
+      linear-gradient(180deg, rgba(13,13,13,.05) 0%, rgba(13,13,13,.14) 100%),
+      url('data:image/jpeg;base64,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'),
+      linear-gradient(180deg, #F2857D 0%, #ffffff 50%, #7DA3F2 100%);
+    background-size:cover, cover, cover;
+    background-position:center, center, center;
+    background-repeat:no-repeat, no-repeat, no-repeat;
+  }
+  #bwSharePopup{
+    background-image:
+      linear-gradient(180deg, rgba(13,13,13,.05) 0%, rgba(13,13,13,.14) 100%),
+      url('data:image/jpeg;base64,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'),
+      linear-gradient(180deg, #F2857D 0%, #ffffff 50%, #7DA3F2 100%);
+    background-size:cover, cover, cover;
+    background-position:center, center, center;
+    background-repeat:no-repeat, no-repeat, no-repeat;
+  }
+  .bw-popup-header{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:12px;
+  }
+  .bw-popup-title{
+    color:var(--paper);
+    font-family:var(--font-mono);
+    font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+  }
+  .bw-popup-close{
+    color:#999;cursor:pointer;font-size:18px;line-height:1;
+  }
+  .bw-link{
+    width:100%;box-sizing:border-box;
+    background:#1a1a1a;border:1px solid #4a4a4a;border-radius:8px;
+    padding:10px 13px;margin-bottom:8px;
+    display:flex;align-items:center;gap:10px;
+    text-decoration:none;
+    font-family:var(--font-body);font-size:12px;font-weight:600;
+    color:var(--paper);
+    transition:background .15s ease;
+  }
+  .bw-link:last-child{ margin-bottom:0; }
+  .bw-link:hover{ background:#262626; }
+  .bw-link .bw-icon{ font-size:15px; }
+  .bw-link.bw-accent-red{ color:#F2857D; }
+  .bw-link.bw-accent-blue{ color:#7DA3F2; }
+  .bw-link.bw-accent-green{ color:#4ADE80; }
+  .bw-direct-row{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .bw-direct-btn{
+    flex:1;
+    box-sizing:border-box;
+    display:flex;flex-direction:row;align-items:center;justify-content:flex-start;
+    gap:10px;
+    padding:11px 14px;
+    border-radius:8px;
+    text-decoration:none;
+    font-family:var(--font-body);font-size:12px;font-weight:700;
+    background:#1a1a1a;
+    border:1px solid #333;
+    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .bw-direct-btn:hover{ transform:translateX(3px); background:#262626; }
+  .bw-direct-btn .bw-icon{ font-size:16px; }
+  .bw-direct-whatsapp{ color:#25D366; border-color:#1f4d33; }
+  .bw-direct-viber{ color:#9B8CFF; border-color:#3a3560; }
+
+  @media(max-width:480px){
+    #bwMainBtn{ left:8px;bottom:12px;width:44px;height:44px;box-shadow:0 2px 8px rgba(0,0,0,.2); }
+    .bw-glow{ left:8px;bottom:12px;width:44px;height:44px; }
+    #bwMainMenu{ left:8px;bottom:64px;zoom:0.7;-moz-transform:scale(0.7);-moz-transform-origin:bottom left; }
+    .bw-popup{ left:8px;bottom:12px;right:8px;min-width:0;width:auto;zoom:0.7;-moz-transform:scale(0.7);-moz-transform-origin:bottom left; }
+  }
+
+  @media(max-width:640px){
+    #mkFormFields{ grid-template-columns:1fr !important; }
+    .mk-prod-qty-options{ flex-wrap:wrap; }
+    .mk-qty-pill{ font-size:10px; padding:5px 8px; }
+    .mk-prod-add-custom{ flex-wrap:wrap; }
+    .mk-order-row{ flex-wrap:wrap; }
+    .mk-topic-list{ max-height:200px; }
+    .mk-form-note-ex, .mk-form-note-customs{ font-size:11px; }
+  }
+
+</style>
+
+<div class="bw-glow bw-glow-left"></div>
+<div class="bw-glow bw-glow-right"></div>
+<div id="bwMainBtn" onclick="bwToggleMain()">
+  <img src="https://i.imgur.com/CMzaSsf.png" alt="Beorol izbornik">
+</div>
+
+<audio id="bwBgMusic" src="https://ia601608.us.archive.org/25/items/tihi-stubici/Tihi%20Stubi%C4%87i.mp3" loop></audio>
+
+<div id="bwMainMenu">
+  <div class="bw-subbtn bw-red" onclick="bwShowKontakt()">
+    <span class="bw-icon">📞</span> Kontaktiraj nas
+  </div>
+  <div class="bw-subbtn bw-blue" onclick="bwShowShare()">
+    <span class="bw-icon">📤</span> Podijeli
+  </div>
+  <div class="bw-subbtn bw-music-green" id="bwMusicSubBtn" onclick="bwToggleMusic()">
+    <span class="bw-icon" id="bwMusicIcon">▶️</span> <span id="bwMusicLabel">Play Music</span>
+  </div>
+</div>
+
+<div id="bwKontaktPopup" class="bw-popup">
+  <div class="bw-popup-header">
+    <span class="bw-popup-title">Kontaktiraj nas</span>
+    <span class="bw-popup-close" onclick="bwCloseAll()">×</span>
+  </div>
+  <a class="bw-link bw-accent-green" href="https://chat.whatsapp.com/LZX4yjypQ8wKpNnakax7H3" target="_blank"><span class="bw-icon">💬</span> WhatsApp Grupa</a>
+  <a class="bw-link bw-accent-blue" href="https://invite.viber.com/?g2=AQBFKgK3sLjmtFcAD2%2FQ44bdyDT0V6cCAH0shj5jb7h8InNaeBUm6WODIUu3TKYq" target="_blank"><span class="bw-icon">📳</span> Viber Grupa</a>
+  <a class="bw-link" href="https://signal.group/#CjQKICDqJcgzlp-MWbhXazzr--QKsSG8KWcaZlCqcv8hvc_bEhDDLJbIFyGOi58r0eG4nuah" target="_blank"><span class="bw-icon">🔒</span> Signal Grupa</a>
+  <a class="bw-link" href="https://t.me/385913584122" target="_blank"><span class="bw-icon">📱</span> Telegram</a>
+  <a class="bw-link" href="https://teams.live.com/meet/934425156029?p=dHOXplL4hvXihL9EpN" target="_blank"><span class="bw-icon">🟣</span> Microsoft Teams</a>
+  <a class="bw-link" href="mailto:batinac.s@beorol.com"><span class="bw-icon">✉️</span> Email</a>  <div class="bw-divider-mini"></div>
+  <div class="bw-direct-row">
+    <a class="bw-direct-btn bw-direct-whatsapp" href="https://wa.me/385913584122" target="_blank"><span class="bw-icon">💬</span> WhatsApp Direktno</a>
+    <a class="bw-direct-btn bw-direct-viber" href="viber://chat/?number=%2B385913584122" target="_blank"><span class="bw-icon">☎️</span> Viber Direktno</a>
+  </div>
+</div>
+
+<div id="bwSharePopup" class="bw-popup">
+  <div class="bw-popup-header">
+    <span class="bw-popup-title">Podijeli</span>
+    <span class="bw-popup-close" onclick="bwCloseAll()">×</span>
+  </div>
+  <button class="bw-link" style="cursor:pointer;" onclick="bwShareNative()"><span class="bw-icon">📤</span> Podijeli / Kopiraj link</button>
+  <a class="bw-link" href="mailto:?subject=Zanimljiva%20poslovna%20prilika%20%E2%80%93%20Grupacija%20Beorol&body=Pozdrav%2C%20mo%C5%BEda%20te%20zanima%20%E2%80%93%20vrlo%20zanimljiva%20ponuda%20i%20proizvodi%20iz%20Grupacije%20Beorol!%20https://batinac.com/beorol"><span class="bw-icon">✉️</span> Email</a>
+  <a class="bw-link bw-accent-blue" href="viber://forward?text=Pozdrav%2C%20mo%C5%BEda%20te%20zanima%20%E2%80%93%20zanimljiva%20poslovna%20ponuda%20i%20kvalitetni%20proizvodi%20iz%20Grupacije%20Beorol!%20%F0%9F%91%87%20https://batinac.com/beorol"><span class="bw-icon">📳</span> Viber</a>
+  <a class="bw-link bw-accent-green" href="https://wa.me/?text=Pozdrav%2C%20mo%C5%BEda%20te%20zanima%20%E2%80%93%20zanimljiva%20poslovna%20ponuda%20i%20kvalitetni%20proizvodi%20iz%20Grupacije%20Beorol!%20%F0%9F%91%87%20https://batinac.com/beorol" target="_blank"><span class="bw-icon">💬</span> WhatsApp</a>
+</div>
+
+<script>
+  var MK_PRODUCTS = [{"c": "VBE258SET", "n": "PAINT ROLLER BLANCO EXTRA WITH HANDLE", "u": "piece", "pk": "1 pcs", "mc": "20 pcs", "q1": 400, "q2": 6000, "pg": "8"}, {"c": "VSD188", "n": "PAINT ROLLER BLANCO DISPERSION", "u": "piece", "pk": "1 pcs", "mc": "30 pcs", "q1": 150, "q2": 2520, "pg": "9"}, {"c": "VSD258", "n": "PAINT ROLLER BLANCO DISPERSION", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 300, "q2": 2520, "pg": "9"}, {"c": "VEDR188", "n": "PAINT ROLLER MELANGE RED EXPERT DISPERSION", "u": "piece", "pk": "1 pcs", "mc": "30 pcs", "q1": 150, "q2": 2520, "pg": "9"}, {"c": "VEDR258", "n": "PAINT ROLLER MELANGE RED EXPERT DISPERSION", "u": "piece", "pk": "1 pcs", "mc": "70 pcs", "q1": 350, "q2": 2520, "pg": "9"}, {"c": "MVEDR10", "n": "MINI PAINT ROLLER MELANGE RED EXPERT DISPERSION", "u": "piece", "pk": "10 pcs", "mc": "460 pcs", "q1": 720, "q2": 17280, "pg": "9"}, {"c": "VEDPG188", "n": "PAINT ROLLER ROYAL EXPERT DISPERSION", "u": "piece", "pk": "1 pcs", "mc": "30 pcs", "q1": 150, "q2": 2520, "pg": "9"}, {"c": "VEDPG258", "n": "PAINT ROLLER ROYAL EXPERT DISPERSION", "u": "piece", "pk": "1 pcs", "mc": "54 pcs", "q1": 270, "q2": 2538, "pg": "9"}, {"c": "VHR188", "n": "PAINT ROLLER HOBBY", "u": "piece", "pk": "1 pcs", "mc": "25 pcs", "q1": 125, "q2": 2500, "pg": "10"}, {"c": "VHR238", "n": "PAINT ROLLER HOBBY", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 1080, "q2": 2520, "pg": "10"}, {"c": "VHR258", "n": "PAINT ROLLER HOBBY", "u": "piece", "pk": "1 pcs", "mc": "55 pcs", "q1": 275, "q2": 2530, "pg": "10"}, {"c": "RHR10", "n": "MINI PAINT ROLLER HOBBY", "u": "piece", "pk": "10 pcs", "mc": "400 pcs", "q1": 400, "q2": 17200, "pg": "10"}, {"c": "VURR188", "n": "PAINT ROLLER ULTRA RED", "u": "piece", "pk": "1 pcs", "mc": "25 pcs", "q1": 125, "q2": 2500, "pg": "10"}, {"c": "VURR258", "n": "PAINT ROLLER ULTRA RED", "u": "piece", "pk": "1 pcs", "mc": "50 pcs", "q1": 250, "q2": 2500, "pg": "10"}, {"c": "RURR10", "n": "MINI PAINT ROLLER ULTRA RED", "u": "piece", "pk": "10 pcs", "mc": "400 pcs", "q1": 400, "q2": 17200, "pg": "10"}, {"c": "VPR188", "n": "PAINT ROLLER PROFY", "u": "piece", "pk": "1 pcs", "mc": "30 pcs", "q1": 150, "q2": 2520, "pg": "10"}, {"c": "VPR238", "n": "PAINT ROLLER PROFY", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 1080, "q2": 2520, "pg": "10"}, {"c": "VPR258", "n": "PAINT ROLLER PROFY", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 300, "q2": 2520, "pg": "10"}, {"c": "VHER188", "n": "PAINT ROLLER HOBBY EXTRA", "u": "piece", "pk": "1 pcs", "mc": "45 pcs", "q1": 225, "q2": 1530, "pg": "11"}, {"c": "VHER238", "n": "PAINT ROLLER HOBBY EXTRA", "u": "piece", "pk": "1 pcs", "mc": "40 pcs", "q1": 680, "q2": 1520, "pg": "11"}, {"c": "VHER258", "n": "PAINT ROLLER HOBBY EXTRA", "u": "piece", "pk": "1 pcs", "mc": "35 pcs", "q1": 175, "q2": 1505, "pg": "11"}, {"c": "VURPR188", "n": "PAINT ROLLER ULTRA RED PLUS", "u": "piece", "pk": "1 pcs", "mc": "45 pcs", "q1": 225, "q2": 1530, "pg": "11"}, {"c": "VURPR258", "n": "PAINT ROLLER ULTRA RED PLUS", "u": "piece", "pk": "1 pcs", "mc": "35 pcs", "q1": 175, "q2": 1505, "pg": "11"}, {"c": "VURPR278", "n": "PAINT ROLLER ULTRA RED PLUS", "u": "piece", "pk": "1 pcs", "mc": "30 pcs", "q1": 150, "q2": 1500, "pg": "11"}, {"c": "VPPR188", "n": "PAINT ROLLER PROFY PLUS", "u": "piece", "pk": "1 pcs", "mc": "45 pcs", "q1": 225, "q2": 1530, "pg": "11"}, {"c": "VPPR238", "n": "PAINT ROLLER PROFY PLUS", "u": "piece", "pk": "1 pcs", "mc": "40 pcs", "q1": 680, "q2": 1520, "pg": "11"}, {"c": "VPPR258", "n": "PAINT ROLLER PROFY PLUS", "u": "piece", "pk": "1 pcs", "mc": "35 pcs", "q1": 175, "q2": 1505, "pg": "11"}, {"c": "VELR188", "n": "PAINT ROLLER ELEVEN", "u": "piece", "pk": "1 pcs", "mc": "30 pcs", "q1": 150, "q2": 2520, "pg": "12"}, {"c": "VELR238", "n": "PAINT ROLLER ELEVEN", "u": "piece", "pk": "1 pcs", "mc": "70 pcs", "q1": 1050, "q2": 2520, "pg": "12"}, {"c": "VELR258", "n": "PAINT ROLLER ELEVEN", "u": "piece", "pk": "1 pcs", "mc": "70 pcs", "q1": 350, "q2": 2520, "pg": "12"}, {"c": "RELR10", "n": "MINI PAINT ROLLER ELEVEN", "u": "piece", "pk": "10 pcs", "mc": "460 pcs", "q1": 460, "q2": 17020, "pg": "12"}, {"c": "VTR188", "n": "PAINT ROLLER TIGER", "u": "piece", "pk": "1 pcs", "mc": "30 pcs", "q1": 150, "q2": 2520, "pg": "12"}, {"c": "VTR258", "n": "PAINT ROLLER TIGER", "u": "piece", "pk": "1 pcs", "mc": "70 pcs", "q1": 350, "q2": 2520, "pg": "12"}, {"c": "VQR258", "n": "PAINT ROLLER QUATTRO", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 300, "q2": 2520, "pg": "12"}, {"c": "VPFR25", "n": "PAINT ROLLER PERFETTO", "u": "piece", "pk": "1 pcs", "mc": "50 pcs", "q1": null, "q2": null, "pg": "13"}, {"c": "VJQR258", "n": "PAINT ROLLER JUMBO QUATTRO", "u": "piece", "pk": "1 pcs", "mc": "35 pcs", "q1": 175, "q2": 1505, "pg": "13"}, {"c": "VSA188", "n": "PAINT ROLLER MICROFIBER ACRYLIC", "u": "piece", "pk": "1 pcs", "mc": "35 pcs", "q1": 175, "q2": 2520, "pg": "15"}, {"c": "VSA258", "n": "PAINT ROLLER MICROFIBER ACRYLIC", "u": "piece", "pk": "1 pcs", "mc": "70 pcs", "q1": 350, "q2": 2520, "pg": "15"}, {"c": "MVSA10", "n": "MINI PAINT ROLLER MICROFIBER ACRYLIC", "u": "piece", "pk": "10 pcs", "mc": "1.000 pcs", "q1": 720, "q2": 17280, "pg": "15"}, {"c": "VEA188", "n": "PAINT ROLLER MICROFIBER EXPERT ACRYLIC", "u": "piece", "pk": "1 pcs", "mc": "35 pcs", "q1": 175, "q2": 2520, "pg": "15"}, {"c": "VEA258", "n": "PAINT ROLLER MICROFIBER EXPERT ACRYLIC", "u": "piece", "pk": "1 pcs", "mc": "70 pcs", "q1": 350, "q2": 2520, "pg": "15"}, {"c": "MVEA10", "n": "MINI PAINT ROLLER MICROFIBER EXPERT ACRYLIC", "u": "piece", "pk": "10 pcs", "mc": "460 pcs", "q1": 720, "q2": 17280, "pg": "15"}, {"c": "VEL188", "n": "PAINT ROLLER MICROFIBER EXPERT LATEX", "u": "piece", "pk": "1 pcs", "mc": "30 pcs", "q1": 150, "q2": 2520, "pg": "15"}, {"c": "VEL258", "n": "PAINT ROLLER MICROFIBER EXPERT LATEX", "u": "piece", "pk": "1 pcs", "mc": "70 pcs", "q1": 350, "q2": 2520, "pg": "15"}, {"c": "MVEL10", "n": "MINI PAINT ROLLER MICROFIBER EXPERT LATEX", "u": "piece", "pk": "10 pcs", "mc": "460 pcs", "q1": 460, "q2": 17020, "pg": "15"}, {"c": "VMFNR188", "n": "PAINT ROLLER MICROFIBER NATUR", "u": "piece", "pk": "1 pcs", "mc": "30 pcs", "q1": 150, "q2": 2520, "pg": "16"}, {"c": "VMFNR238", "n": "PAINT ROLLER MICROFIBER NATUR", "u": "piece", "pk": "1 pcs", "mc": "70 pcs", "q1": 1400, "q2": 2520, "pg": "16"}, {"c": "VMFNR258", "n": "PAINT ROLLER MICROFIBER NATUR", "u": "piece", "pk": "1 pcs", "mc": "70 pcs", "q1": 350, "q2": 2520, "pg": "16"}, {"c": "RMFNR10", "n": "PAINT ROLLER MICROFIBER NATUR (MINI)", "u": "piece", "pk": "10 pcs", "mc": "460 pcs", "q1": 460, "q2": 17020, "pg": "16"}, {"c": "VMFRLR188", "n": "PAINT ROLLER MICROFIBER RED LINE", "u": "piece", "pk": "1 pcs", "mc": "30 pcs", "q1": 150, "q2": 2520, "pg": "16"}, {"c": "VMFRLR238", "n": "PAINT ROLLER MICROFIBER RED LINE", "u": "piece", "pk": "1 pcs", "mc": "40 pcs", "q1": 1200, "q2": 2520, "pg": "16"}, {"c": "VMFRLR258", "n": "PAINT ROLLER MICROFIBER RED LINE", "u": "piece", "pk": "1 pcs", "mc": "70 pcs", "q1": 350, "q2": 2520, "pg": "16"}, {"c": "RMFRLR10", "n": "PAINT ROLLER MICROFIBER RED LINE (MINI)", "u": "piece", "pk": "10 pcs", "mc": "720 pcs", "q1": 720, "q2": 17280, "pg": "16"}, {"c": "VEP188", "n": "PAINT ROLLER MICROFIBER POLYURETHANE", "u": "piece", "pk": "1 pcs", "mc": "35 pcs", "q1": 175, "q2": 2520, "pg": "17"}, {"c": "VEP258", "n": "PAINT ROLLER MICROFIBER POLYURETHANE", "u": "piece", "pk": "1 pcs", "mc": "70 pcs", "q1": 350, "q2": 2520, "pg": "17"}, {"c": "MVEP10", "n": "MINI PAINT ROLLER MICROFIBER POLYURETHANE", "u": "piece", "pk": "10 pcs", "mc": "1.000 pcs", "q1": 720, "q2": 17280, "pg": "17"}, {"c": "VEE188-7", "n": "PAINT ROLLER EPOXY SHORT PILE 7mm", "u": "piece", "pk": "1 pcs", "mc": "35 pcs", "q1": 175, "q2": 2520, "pg": "19"}, {"c": "VEE258-7", "n": "PAINT ROLLER EPOXY SHORT PILE 7mm", "u": "piece", "pk": "1 pcs", "mc": "75 pcs", "q1": 375, "q2": 2550, "pg": "19"}, {"c": "MVEE7", "n": "MINI PAINT ROLLER EPOXY SHORT PILE 7mm", "u": "piece", "pk": "10 pcs", "mc": "1.200 pcs", "q1": 1200, "q2": 18000, "pg": "19"}, {"c": "MVEE10", "n": "MINI PAINT ROLLER EPOXY SHORT PILE 7mm", "u": "piece", "pk": "10 pcs", "mc": "1.000 pcs", "q1": 720, "q2": 17280, "pg": "19"}, {"c": "VEE188-13", "n": "PAINT ROLLER EPOXY MEDIUM PILE 13mm", "u": "piece", "pk": "1 pcs", "mc": "30 pcs", "q1": 150, "q2": 2520, "pg": "19"}, {"c": "VEE258-13", "n": "PAINT ROLLER EPOXY MEDIUM PILE 13mm", "u": "piece", "pk": "1 pcs", "mc": "50 pcs", "q1": 250, "q2": 2500, "pg": "19"}, {"c": "VELV188", "n": "PAINT ROLLER MICROFIBER WATER BASE", "u": "piece", "pk": "1 pcs", "mc": "35 pcs", "q1": 175, "q2": 2520, "pg": "21"}, {"c": "VELV258", "n": "PAINT ROLLER MICROFIBER WATER BASE", "u": "piece", "pk": "1 pcs", "mc": "70 pcs", "q1": 350, "q2": 2520, "pg": "21"}, {"c": "MVELV10", "n": "MINI PAINT ROLLER MICROFIBER WATER BASE", "u": "piece", "pk": "10 pcs", "mc": "800 pcs", "q1": 720, "q2": 17280, "pg": "21"}, {"c": "VSLU188", "n": "PAINT ROLLER MOHAIR OIL BASE", "u": "piece", "pk": "1 pcs", "mc": "35 pcs", "q1": 175, "q2": 2520, "pg": "21"}, {"c": "VSLU258", "n": "PAINT ROLLER MOHAIR OIL BASE", "u": "piece", "pk": "1 pcs", "mc": "75 pcs", "q1": 375, "q2": 2550, "pg": "21"}, {"c": "MVSLU7", "n": "MINI PAINT ROLLER MOHAIR OIL BASE", "u": "piece", "pk": "10 pcs", "mc": "1.200 pcs", "q1": 1200, "q2": 18000, "pg": "21"}, {"c": "MVSLU10", "n": "MINI PAINT ROLLER MOHAIR OIL BASE", "u": "piece", "pk": "10 pcs", "mc": "1.000 pcs", "q1": 720, "q2": 17280, "pg": "21"}, {"c": "VPNR258", "n": "PAINT ROLLER PINK MOHAIR", "u": "piece", "pk": "1 pcs", "mc": "75 pcs", "q1": 375, "q2": 2550, "pg": "21"}, {"c": "VEFAS188", "n": "PAINT ROLLER GOLD FACADE", "u": "piece", "pk": "1 pcs", "mc": "30 pcs", "q1": 150, "q2": 2520, "pg": "23"}, {"c": "VEFAS258", "n": "PAINT ROLLER GOLD FACADE", "u": "piece", "pk": "1 pcs", "mc": "54 pcs", "q1": 270, "q2": 2538, "pg": "23"}, {"c": "MVEFAS10", "n": "MINI PAINT ROLLER GOLD FACADE", "u": "piece", "pk": "1 pcs", "mc": "400 pcs", "q1": 400, "q2": 17200, "pg": "23"}, {"c": "VRGR188", "n": "PAINT ROLLER ROYAL GRAND", "u": "piece", "pk": "1 pcs", "mc": "40 pcs", "q1": 200, "q2": 1520, "pg": "23"}, {"c": "VRGR258", "n": "PAINT ROLLER ROYAL GRAND", "u": "piece", "pk": "1 pcs", "mc": "35 pcs", "q1": 175, "q2": 1505, "pg": "23"}, {"c": "VRGR278", "n": "PAINT ROLLER ROYAL GRAND", "u": "piece", "pk": "1 pcs", "mc": "25 pcs", "q1": 125, "q2": 1500, "pg": "23"}, {"c": "VMR258", "n": "PAINT ROLLER MAXI", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 300, "q2": 2520, "pg": "24"}, {"c": "RMR10", "n": "MINI PAINT ROLLER MAXI", "u": "piece", "pk": "10 pcs", "mc": "400 pcs", "q1": 400, "q2": 17200, "pg": "24"}, {"c": "VMSCR188", "n": "PAINT ROLLER YELLOW GREEN", "u": "piece", "pk": "1 pcs", "mc": "25 pcs", "q1": 125, "q2": 2500, "pg": "24"}, {"c": "VMSCR258", "n": "PAINT ROLLER YELLOW GREEN", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 300, "q2": 2520, "pg": "24"}, {"c": "RMSCR10", "n": "MINI PAINT ROLLER YELLOW GREEN", "u": "piece", "pk": "10 pcs", "mc": "460 pcs", "q1": 460, "q2": 17020, "pg": "24"}, {"c": "VMSBR188", "n": "PAINT ROLLER MELANGE SKY BLUE", "u": "piece", "pk": "1 pcs", "mc": "30 pcs", "q1": null, "q2": null, "pg": "24"}, {"c": "VMSBR258", "n": "PAINT ROLLER MELANGE SKY BLUE", "u": "piece", "pk": "1 pcs", "mc": "50 pcs", "q1": 250, "q2": 2500, "pg": "24"}, {"c": "VJMR188", "n": "PAINT ROLLER JUMBO MAXI", "u": "piece", "pk": "1 pcs", "mc": "45 pcs", "q1": null, "q2": null, "pg": "25"}, {"c": "VJMR258", "n": "PAINT ROLLER JUMBO MAXI", "u": "piece", "pk": "1 pcs", "mc": "35 pcs", "q1": 175, "q2": 1505, "pg": "25"}, {"c": "VJMSCR188", "n": "PAINT ROLLER JUMBO YELLOW GREEN", "u": "piece", "pk": "1 pcs", "mc": "45 pcs", "q1": 225, "q2": 1530, "pg": "25"}, {"c": "VJMSCR258", "n": "PAINT ROLLER JUMBO YELLOW GREEN", "u": "piece", "pk": "1 pcs", "mc": "35 pcs", "q1": 175, "q2": 1505, "pg": "25"}, {"c": "VJMSBR18", "n": "PAINT ROLLER JUMBO MELANGE SKY BLUE", "u": "piece", "pk": "1 pcs", "mc": "45 pcs", "q1": null, "q2": null, "pg": "25"}, {"c": "VJMSBR258", "n": "PAINT ROLLER JUMBO MELANGE SKY BLUE", "u": "piece", "pk": "1 pcs", "mc": "35 pcs", "q1": 175, "q2": 1505, "pg": "25"}, {"c": "VSG258", "n": "STANDARD PLASTER ROLLER", "u": "piece", "pk": "1 pcs", "mc": "40 pcs", "q1": 200, "q2": 2520, "pg": "26"}, {"c": "RKR7", "n": "MINI PAINT ROLLER POLYESTER", "u": "piece", "pk": "10 pcs", "mc": "1.200 pcs", "q1": 1000, "q2": 17000, "pg": "27"}, {"c": "RKR10", "n": "MINI PAINT ROLLER POLYESTER", "u": "piece", "pk": "10 pcs", "mc": "460 pcs", "q1": 460, "q2": 17020, "pg": "27"}, {"c": "RV188", "n": "PAINT ROLLER HANDLE", "u": "piece", "pk": "100 pcs", "mc": "100 pcs", "q1": 1000, "q2": 11800, "pg": "31"}, {"c": "RV238", "n": "PAINT ROLLER HANDLE", "u": "piece", "pk": "100 pcs", "mc": "100 pcs", "q1": 2000, "q2": 11800, "pg": "31"}, {"c": "RV258", "n": "PAINT ROLLER HANDLE", "u": "piece", "pk": "100 pcs", "mc": "100 pcs", "q1": 1000, "q2": 11800, "pg": "31"}, {"c": "RR7", "n": "MINI PAINT ROLLER HANDLE", "u": "piece", "pk": "270 pcs", "mc": "270 pcs", "q1": 2700, "q2": 7290, "pg": "31"}, {"c": "RR29", "n": "MINI PAINT ROLLER HANDLE", "u": "piece", "pk": "250 pcs", "mc": "250 pcs", "q1": 1250, "q2": 7250, "pg": "31"}, {"c": "RR40", "n": "MINI PAINT ROLLER HANDLE", "u": "piece", "pk": "230 pcs", "mc": "230 pcs", "q1": 1150, "q2": 7130, "pg": "31"}, {"c": "RR56", "n": "MINI PAINT ROLLER HANDLE", "u": "piece", "pk": "170 pcs", "mc": "170 pcs", "q1": 1700, "q2": 7140, "pg": "31"}, {"c": "K36X36", "n": "PAINT TRAY", "u": "pcs", "pk": "50 pcs", "mc": "45 pcs", "q1": 45, "q2": 5715, "pg": "33"}, {"c": "K36X26", "n": "PAINT TRAY", "u": "pcs", "pk": "60 pcs", "mc": "60 pcs", "q1": 60, "q2": 5340, "pg": "33"}, {"c": "K15X32", "n": "PAINT TRAY", "u": "pcs", "pk": "100 pcs", "mc": "100 pcs", "q1": 100, "q2": 5200, "pg": "33"}, {"c": "RMPVC", "n": "PVC PAINT GRID", "u": "piece", "pk": "100 pcs", "mc": "100 pcs", "q1": 100, "q2": 5100, "pg": "33"}, {"c": "RPVC", "n": "PVC PAINT GRID", "u": "piece", "pk": "100 pcs", "mc": "100 pcs", "q1": 100, "q2": 5300, "pg": "33"}, {"c": "RSPVC", "n": "PVC PAINT GRID, PROFESSIONAL", "u": "piece", "pk": "100 pcs", "mc": "100 pcs", "q1": 100, "q2": 5500, "pg": "33"}, {"c": "RPVCP", "n": "PVC PAINT GRID, PROFESSIONAL", "u": "piece", "pk": "45 pcs", "mc": "45 pcs", "q1": 45, "q2": 5130, "pg": "33"}, {"c": "US20", "n": "UNIVERSAL SYNTHETIC PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "1.128 pcs", "q1": 2256, "q2": 9024, "pg": "36"}, {"c": "US30", "n": "UNIVERSAL SYNTHETIC PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "804 pcs", "q1": 2412, "q2": 8844, "pg": "36"}, {"c": "US40", "n": "UNIVERSAL SYNTHETIC PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "672 pcs", "q1": 2016, "q2": 10080, "pg": "36"}, {"c": "US50", "n": "UNIVERSAL SYNTHETIC PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "504 pcs", "q1": 2016, "q2": 8064, "pg": "36"}, {"c": "US60", "n": "UNIVERSAL SYNTHETIC PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "360 pcs", "q1": 2160, "q2": 7560, "pg": "36"}, {"c": "US70", "n": "UNIVERSAL SYNTHETIC PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "288 pcs", "q1": 2016, "q2": 7200, "pg": "36"}, {"c": "US80", "n": "UNIVERSAL SYNTHETIC PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "288 pcs", "q1": 2016, "q2": 7200, "pg": "36"}, {"c": "US100", "n": "UNIVERSAL SYNTHETIC PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "192 pcs", "q1": 2112, "q2": 5568, "pg": "36"}, {"c": "DCB30", "n": "DECO PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "804 pcs", "q1": 2412, "q2": null, "pg": "37"}, {"c": "DCB40", "n": "DECO PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "672 pcs", "q1": 2016, "q2": null, "pg": "37"}, {"c": "DCB50", "n": "DECO PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "504 pcs", "q1": 2016, "q2": null, "pg": "37"}, {"c": "DCB60", "n": "DECO PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "360 pcs", "q1": 2160, "q2": null, "pg": "37"}, {"c": "DCB70", "n": "DECO PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "288 pcs", "q1": 2016, "q2": null, "pg": "37"}, {"c": "DCB80", "n": "DECO PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "288 pcs", "q1": 2016, "q2": null, "pg": "37"}, {"c": "DCB100", "n": "DECO PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "192 pcs", "q1": 2112, "q2": null, "pg": "37"}, {"c": "UE20", "n": "UNIVERSAL PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "1.128 pcs", "q1": 2256, "q2": 9024, "pg": "37"}, {"c": "UE30", "n": "UNIVERSAL PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "804 pcs", "q1": 2412, "q2": 8844, "pg": "37"}, {"c": "UE40", "n": "UNIVERSAL PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "672 pcs", "q1": 2016, "q2": 10080, "pg": "37"}, {"c": "UE50", "n": "UNIVERSAL PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "504 pcs", "q1": 2016, "q2": 8064, "pg": "37"}, {"c": "UE60", "n": "UNIVERSAL PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "360 pcs", "q1": 2160, "q2": 7200, "pg": "37"}, {"c": "UE70", "n": "UNIVERSAL PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "288 pcs", "q1": 2016, "q2": 7200, "pg": "37"}, {"c": "UE80", "n": "UNIVERSAL PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "288 pcs", "q1": 2016, "q2": 7200, "pg": "37"}, {"c": "UE100", "n": "UNIVERSAL PAINT BRUSH", "u": "piece", "pk": "12 pcs", "mc": "192 pcs", "q1": 2112, "q2": 5568, "pg": "37"}, {"c": "UEX1", "n": "UNIVERSAL EXPERT PAINT BRUSH", "u": "piece", "pk": "3 pcs", "mc": "270 pcs", "q1": 2160, "q2": 6480, "pg": "37"}, {"c": "UEX1.5", "n": "UNIVERSAL EXPERT PAINT BRUSH", "u": "piece", "pk": "3 pcs", "mc": "240 pcs", "q1": 2160, "q2": 6720, "pg": "37"}, {"c": "UEX2", "n": "UNIVERSAL EXPERT PAINT BRUSH", "u": "piece", "pk": "3 pcs", "mc": "240 pcs", "q1": 2160, "q2": 6720, "pg": "37"}, {"c": "UEX2.5", "n": "UNIVERSAL EXPERT PAINT BRUSH", "u": "piece", "pk": "3 pcs", "mc": "120 pcs", "q1": 2040, "q2": 6000, "pg": "37"}, {"c": "UEX3", "n": "UNIVERSAL EXPERT PAINT BRUSH", "u": "piece", "pk": "3 pcs", "mc": "120 pcs", "q1": 2040, "q2": 5520, "pg": "37"}, {"c": "ALSS", "n": "ACRYLIC STANDARD PAINT BRUSH", "u": "piece", "pk": "4 pcs", "mc": "360 pcs", "q1": 1080, "q2": 8280, "pg": "39"}, {"c": "ALSM", "n": "ACRYLIC STANDARD PAINT BRUSH", "u": "piece", "pk": "4 pcs", "mc": "320 pcs", "q1": 960, "q2": 8000, "pg": "39"}, {"c": "ALSL", "n": "ACRYLIC STANDARD PAINT BRUSH", "u": "piece", "pk": "4 pcs", "mc": "160 pcs", "q1": 960, "q2": 7040, "pg": "39"}, {"c": "ALES", "n": "ACRYLIC EXPERT PAINT BRUSH", "u": "piece", "pk": "3 pcs", "mc": "240 pcs", "q1": 480, "q2": null, "pg": "39"}, {"c": "ALEM", "n": "ACRYLIC EXPERT PAINT BRUSH", "u": "piece", "pk": "3 pcs", "mc": "240 pcs", "q1": 480, "q2": null, "pg": "39"}, {"c": "ALEL", "n": "ACRYLIC EXPERT PAINT BRUSH", "u": "piece", "pk": "3 pcs", "mc": "120 pcs", "q1": 480, "q2": null, "pg": "39"}, {"c": "ALEXL", "n": "ACRYLIC EXPERT PAINT BRUSH", "u": "piece", "pk": "3 pcs", "mc": "120 pcs", "q1": 480, "q2": null, "pg": "39"}, {"c": "ALPM", "n": "ACRYLIC PRECISION PAINT BRUSH", "u": "piece", "pk": "3 pcs", "mc": "144 pcs", "q1": 432, "q2": null, "pg": "39"}, {"c": "LDS", "n": "WOOD STAIN PAINT BRUSH", "u": "piece", "pk": "4 pcs", "mc": "360 pcs", "q1": 1080, "q2": 8280, "pg": "41"}, {"c": "LDM", "n": "WOOD STAIN PAINT BRUSH", "u": "piece", "pk": "4 pcs", "mc": "320 pcs", "q1": 960, "q2": 8000, "pg": "41"}, {"c": "LDL", "n": "WOOD STAIN PAINT BRUSH", "u": "piece", "pk": "4 pcs", "mc": "160 pcs", "q1": 960, "q2": 7040, "pg": "41"}, {"c": "FDS", "n": "WOOD PAINTING BRUSH", "u": "piece", "pk": "3 pcs", "mc": "240 pcs", "q1": 720, "q2": 6000, "pg": "41"}, {"c": "FDM", "n": "WOOD PAINTING BRUSH", "u": "piece", "pk": "3 pcs", "mc": "240 pcs", "q1": 720, "q2": 6000, "pg": "41"}, {"c": "FDL", "n": "WOOD PAINTING BRUSH", "u": "piece", "pk": "3 pcs", "mc": "120 pcs", "q1": 720, "q2": 5040, "pg": "41"}, {"c": "FDXL", "n": "WOOD PAINTING BRUSH", "u": "piece", "pk": "3 pcs", "mc": "120 pcs", "q1": 720, "q2": 4560, "pg": "41"}, {"c": "MSS", "n": "METAL STANDARD PAINT BRUSH", "u": "piece", "pk": "4 pcs", "mc": "360 pcs", "q1": 1080, "q2": 8280, "pg": "42"}, {"c": "MSM", "n": "METAL STANDARD PAINT BRUSH", "u": "piece", "pk": "4 pcs", "mc": "320 pcs", "q1": 960, "q2": 8000, "pg": "42"}, {"c": "MSL", "n": "METAL STANDARD PAINT BRUSH", "u": "piece", "pk": "4 pcs", "mc": "160 pcs", "q1": 960, "q2": 7040, "pg": "42"}, {"c": "DRB70", "n": "PAINT BRUSH FOR DECORATIVE WORKS", "u": "piece", "pk": "12 pcs", "mc": "168 pcs", "q1": 2016, "q2": null, "pg": "43"}, {"c": "DRB100", "n": "PAINT BRUSH FOR DECORATIVE WORKS", "u": "piece", "pk": "6 pcs", "mc": "84 pcs", "q1": 2016, "q2": null, "pg": "43"}, {"c": "RBP10", "n": "RADIATOR PAINT BRUSH PROFY", "u": "piece", "pk": "10 pcs", "mc": "540 pcs", "q1": 540, "q2": 6480, "pg": "44"}, {"c": "RBP15", "n": "RADIATOR PAINT BRUSH PROFY", "u": "piece", "pk": "10 pcs", "mc": "360 pcs", "q1": 360, "q2": 6840, "pg": "44"}, {"c": "RBP20", "n": "RADIATOR PAINT BRUSH PROFY", "u": "piece", "pk": "10 pcs", "mc": "280 pcs", "q1": 280, "q2": 6720, "pg": "44"}, {"c": "RBP25", "n": "RADIATOR PAINT BRUSH PROFY", "u": "piece", "pk": "10 pcs", "mc": "240 pcs", "q1": 240, "q2": 5520, "pg": "44"}, {"c": "RB10", "n": "RADIATOR PAINT BRUSH", "u": "piece", "pk": "10 pcs", "mc": "540 pcs", "q1": 540, "q2": 6480, "pg": "44"}, {"c": "RB15", "n": "RADIATOR PAINT BRUSH", "u": "piece", "pk": "10 pcs", "mc": "480 pcs", "q1": 480, "q2": 6720, "pg": "44"}, {"c": "RB20", "n": "RADIATOR PAINT BRUSH", "u": "piece", "pk": "10 pcs", "mc": "360 pcs", "q1": 360, "q2": 6840, "pg": "44"}, {"c": "RB25", "n": "RADIATOR PAINT BRUSH", "u": "piece", "pk": "10 pcs", "mc": "240 pcs", "q1": 240, "q2": 5520, "pg": "44"}, {"c": "CC", "n": "CORNER BRUSH", "u": "piece", "pk": "150 pcs", "mc": "150 pcs", "q1": 150, "q2": 5100, "pg": "44"}, {"c": "PB10", "n": "PARQUETRY LACQUER BRUSH", "u": "piece", "pk": "50 pcs", "mc": "50 pcs", "q1": 50, "q2": null, "pg": "45"}, {"c": "PB12", "n": "PARQUETRY LACQUER BRUSH", "u": "piece", "pk": "40 pcs", "mc": "40 pcs", "q1": 40, "q2": null, "pg": "45"}, {"c": "PB14", "n": "PARQUETRY LACQUER BRUSH", "u": "piece", "pk": "20 pcs", "mc": "20 pcs", "q1": 20, "q2": null, "pg": "45"}, {"c": "PB15", "n": "PARQUETRY LACQUER BRUSH", "u": "piece", "pk": "16 pcs", "mc": "16 pcs", "q1": 16, "q2": null, "pg": "45"}, {"c": "EPB10", "n": "ECONOMIC PARQUETRY LACQUER BRUSH", "u": "piece", "pk": "50 pcs", "mc": "50 pcs", "q1": 50, "q2": null, "pg": "45"}, {"c": "EPB12", "n": "ECONOMIC PARQUETRY LACQUER BRUSH", "u": "piece", "pk": "40 pcs", "mc": "40 pcs", "q1": 40, "q2": null, "pg": "45"}, {"c": "EPB14", "n": "ECONOMIC PARQUETRY LACQUER BRUSH", "u": "piece", "pk": "25 pcs", "mc": "25 pcs", "q1": 25, "q2": null, "pg": "45"}, {"c": "BK1850", "n": "MASKING TAPE WALL AND CEILING PROFESSIONAL", "u": "piece", "pk": "1 pcs", "mc": "96 pcs", "q1": 4992, "q2": null, "pg": "50"}, {"c": "BK2450", "n": "MASKING TAPE WALL AND CEILING PROFESSIONAL", "u": "piece", "pk": "1 pcs", "mc": "72 pcs", "q1": 3816, "q2": null, "pg": "50"}, {"c": "BK3050", "n": "MASKING TAPE WALL AND CEILING PROFESSIONAL", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 3060, "q2": null, "pg": "50"}, {"c": "BK3650", "n": "MASKING TAPE WALL AND CEILING PROFESSIONAL", "u": "piece", "pk": "1 pcs", "mc": "48 pcs", "q1": 2496, "q2": null, "pg": "50"}, {"c": "BK4850", "n": "MASKING TAPE WALL AND CEILING PROFESSIONAL", "u": "piece", "pk": "1 pcs", "mc": "36 pcs", "q1": 1872, "q2": null, "pg": "50"}, {"c": "MK1850", "n": "MASKING TAPE WALL AND CEILING STANDARD", "u": "piece", "pk": "1 pcs", "mc": "96 pcs", "q1": 3072, "q2": null, "pg": "50"}, {"c": "MK2450", "n": "MASKING TAPE WALL AND CEILING STANDARD", "u": "piece", "pk": "1 pcs", "mc": "72 pcs", "q1": 2304, "q2": null, "pg": "50"}, {"c": "MK3050", "n": "MASKING TAPE WALL AND CEILING STANDARD", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 1860, "q2": null, "pg": "50"}, {"c": "MK3650", "n": "MASKING TAPE WALL AND CEILING STANDARD", "u": "piece", "pk": "1 pcs", "mc": "48 pcs", "q1": 1488, "q2": null, "pg": "50"}, {"c": "MK4850", "n": "MASKING TAPE WALL AND CEILING STANDARD", "u": "piece", "pk": "1 pcs", "mc": "36 pcs", "q1": 1152, "q2": null, "pg": "50"}, {"c": "BK185016", "n": "WALL AND CEILING PROFESSIONAL PACKET (TOWER)", "u": "piece", "pk": "16 pcs", "mc": "96 pcs", "q1": 4992, "q2": null, "pg": "51"}, {"c": "BK245012", "n": "WALL AND CEILING PROFESSIONAL PACKET (TOWER)", "u": "piece", "pk": "12 pcs", "mc": "72 pcs", "q1": 3816, "q2": null, "pg": "51"}, {"c": "BK305010", "n": "WALL AND CEILING PROFESSIONAL PACKET (TOWER)", "u": "piece", "pk": "10 pcs", "mc": "60 pcs", "q1": 3060, "q2": null, "pg": "51"}, {"c": "BK36508", "n": "WALL AND CEILING PROFESSIONAL PACKET (TOWER)", "u": "piece", "pk": "8 pcs", "mc": "48 pcs", "q1": 2496, "q2": null, "pg": "51"}, {"c": "BK48506", "n": "WALL AND CEILING PROFESSIONAL PACKET (TOWER)", "u": "piece", "pk": "6 pcs", "mc": "36 pcs", "q1": 1872, "q2": null, "pg": "51"}, {"c": "MK185016", "n": "WALL AND CEILING STANDARD PACKET (TOWER)", "u": "piece", "pk": "16 pcs", "mc": "96 pcs", "q1": 3072, "q2": null, "pg": "51"}, {"c": "MK245012", "n": "WALL AND CEILING STANDARD PACKET (TOWER)", "u": "piece", "pk": "12 pcs", "mc": "72 pcs", "q1": 2304, "q2": null, "pg": "51"}, {"c": "MK305010", "n": "WALL AND CEILING STANDARD PACKET (TOWER)", "u": "piece", "pk": "10 pcs", "mc": "60 pcs", "q1": 1860, "q2": null, "pg": "51"}, {"c": "MK36508", "n": "WALL AND CEILING STANDARD PACKET (TOWER)", "u": "piece", "pk": "8 pcs", "mc": "48 pcs", "q1": 1488, "q2": null, "pg": "51"}, {"c": "MK48506", "n": "WALL AND CEILING STANDARD PACKET (TOWER)", "u": "piece", "pk": "6 pcs", "mc": "36 pcs", "q1": 1152, "q2": null, "pg": "51"}, {"c": "PROK1850", "n": "FACADE PROFESSIONAL", "u": "piece", "pk": "1 pcs", "mc": "96 pcs", "q1": 4992, "q2": null, "pg": "52"}, {"c": "PROK2450", "n": "FACADE PROFESSIONAL", "u": "piece", "pk": "1 pcs", "mc": "72 pcs", "q1": 3816, "q2": null, "pg": "52"}, {"c": "PROK3050", "n": "FACADE PROFESSIONAL", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 3060, "q2": null, "pg": "52"}, {"c": "PROK3650", "n": "FACADE PROFESSIONAL", "u": "piece", "pk": "1 pcs", "mc": "48 pcs", "q1": 2496, "q2": null, "pg": "52"}, {"c": "PROK4850", "n": "FACADE PROFESSIONAL", "u": "piece", "pk": "1 pcs", "mc": "36 pcs", "q1": 1872, "q2": null, "pg": "52"}, {"c": "FASK1850", "n": "FACADE STANDARD", "u": "piece", "pk": "1 pcs", "mc": "96 pcs", "q1": 4992, "q2": null, "pg": "52"}, {"c": "FASK2450", "n": "FACADE STANDARD", "u": "piece", "pk": "1 pcs", "mc": "72 pcs", "q1": 3816, "q2": null, "pg": "52"}, {"c": "FASK3050", "n": "FACADE STANDARD", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 3060, "q2": null, "pg": "52"}, {"c": "FASK3650", "n": "FACADE STANDARD", "u": "piece", "pk": "1 pcs", "mc": "48 pcs", "q1": 2544, "q2": null, "pg": "52"}, {"c": "FASK4850", "n": "FACADE STANDARD", "u": "piece", "pk": "1 pcs", "mc": "36 pcs", "q1": 1872, "q2": null, "pg": "52"}, {"c": "PROK185016", "n": "FACADE PROFESSIONAL PACKET (TOWER)", "u": "piece", "pk": "16 pcs", "mc": "96 pcs", "q1": null, "q2": null, "pg": "53"}, {"c": "PROK245012", "n": "FACADE PROFESSIONAL PACKET (TOWER)", "u": "piece", "pk": "12 pcs", "mc": "72 pcs", "q1": null, "q2": null, "pg": "53"}, {"c": "PROK305010", "n": "FACADE PROFESSIONAL PACKET (TOWER)", "u": "piece", "pk": "10 pcs", "mc": "60 pcs", "q1": null, "q2": null, "pg": "53"}, {"c": "PROK36508", "n": "FACADE PROFESSIONAL PACKET (TOWER)", "u": "piece", "pk": "8 pcs", "mc": "48 pcs", "q1": null, "q2": null, "pg": "53"}, {"c": "PROK48506", "n": "FACADE PROFESSIONAL PACKET (TOWER)", "u": "piece", "pk": "6 pcs", "mc": "36 pcs", "q1": null, "q2": null, "pg": "53"}, {"c": "FASK185016", "n": "FACADE STANDARD PACKET (TOWER)", "u": "piece", "pk": "16 pcs", "mc": "96 pcs", "q1": 4992, "q2": null, "pg": "53"}, {"c": "FASK245012", "n": "FACADE STANDARD PACKET (TOWER)", "u": "piece", "pk": "12 pcs", "mc": "72 pcs", "q1": 3816, "q2": null, "pg": "53"}, {"c": "FASK305010", "n": "FACADE STANDARD PACKET (TOWER)", "u": "piece", "pk": "10 pcs", "mc": "60 pcs", "q1": 3060, "q2": null, "pg": "53"}, {"c": "FASK36508", "n": "FACADE STANDARD PACKET (TOWER)", "u": "piece", "pk": "8 pcs", "mc": "48 pcs", "q1": 2544, "q2": null, "pg": "53"}, {"c": "FASK48506", "n": "FACADE STANDARD PACKET (TOWER)", "u": "piece", "pk": "6 pcs", "mc": "36 pcs", "q1": 1872, "q2": null, "pg": "53"}, {"c": "DK1850", "n": "MASKING TAPE DOOR AND WINDOW", "u": "piece", "pk": "1 pcs", "mc": "96 pcs", "q1": 2400, "q2": null, "pg": "54"}, {"c": "DK2450", "n": "MASKING TAPE DOOR AND WINDOW", "u": "piece", "pk": "1 pcs", "mc": "72 pcs", "q1": 1872, "q2": null, "pg": "54"}, {"c": "DK3050", "n": "MASKING TAPE DOOR AND WINDOW", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 1500, "q2": null, "pg": "54"}, {"c": "DK3650", "n": "MASKING TAPE DOOR AND WINDOW", "u": "piece", "pk": "1 pcs", "mc": "48 pcs", "q1": 1200, "q2": null, "pg": "54"}, {"c": "DK4850", "n": "MASKING TAPE DOOR AND WINDOW", "u": "piece", "pk": "1 pcs", "mc": "36 pcs", "q1": 936, "q2": null, "pg": "54"}, {"c": "PLK1850", "n": "MASKING TAPE DECORATIVE LINE", "u": "piece", "pk": "1 pcs", "mc": "96 pcs", "q1": 2400, "q2": null, "pg": "54"}, {"c": "PLK2450", "n": "MASKING TAPE DECORATIVE LINE", "u": "piece", "pk": "1 pcs", "mc": "72 pcs", "q1": 1872, "q2": null, "pg": "54"}, {"c": "PLK3050", "n": "MASKING TAPE DECORATIVE LINE", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 1500, "q2": null, "pg": "54"}, {"c": "PLK3650", "n": "MASKING TAPE DECORATIVE LINE", "u": "piece", "pk": "1 pcs", "mc": "48 pcs", "q1": 1200, "q2": null, "pg": "54"}, {"c": "PLK4850", "n": "MASKING TAPE DECORATIVE LINE", "u": "piece", "pk": "1 pcs", "mc": "36 pcs", "q1": 936, "q2": null, "pg": "54"}, {"c": "KTDRS33", "n": "MASKING TAPE DECORATIVE LINE", "u": "piece", "pk": "5 pcs", "mc": "330 pcs", "q1": null, "q2": null, "pg": "54"}, {"c": "DK185016", "n": "DOOR AND WINDOW PACKET (TOWER)", "u": "piece", "pk": "16 pcs", "mc": "96 pcs", "q1": null, "q2": null, "pg": "55"}, {"c": "DK245012", "n": "DOOR AND WINDOW PACKET (TOWER)", "u": "piece", "pk": "12 pcs", "mc": "72 pcs", "q1": null, "q2": null, "pg": "55"}, {"c": "DK305010", "n": "DOOR AND WINDOW PACKET (TOWER)", "u": "piece", "pk": "10 pcs", "mc": "60 pcs", "q1": null, "q2": null, "pg": "55"}, {"c": "DK36508", "n": "DOOR AND WINDOW PACKET (TOWER)", "u": "piece", "pk": "8 pcs", "mc": "48 pcs", "q1": null, "q2": null, "pg": "55"}, {"c": "DK48506", "n": "DOOR AND WINDOW PACKET (TOWER)", "u": "piece", "pk": "6 pcs", "mc": "36 pcs", "q1": null, "q2": null, "pg": "55"}, {"c": "PLK185016", "n": "DECORATIVE LINE PACKET (TOWER)", "u": "piece", "pk": "16 pcs", "mc": "96 pcs", "q1": null, "q2": null, "pg": "55"}, {"c": "PLK245012", "n": "DECORATIVE LINE PACKET (TOWER)", "u": "piece", "pk": "12 pcs", "mc": "72 pcs", "q1": null, "q2": null, "pg": "55"}, {"c": "PLK305010", "n": "DECORATIVE LINE PACKET (TOWER)", "u": "piece", "pk": "10 pcs", "mc": "60 pcs", "q1": null, "q2": null, "pg": "55"}, {"c": "PLK36508", "n": "DECORATIVE LINE PACKET (TOWER)", "u": "piece", "pk": "8 pcs", "mc": "48 pcs", "q1": null, "q2": null, "pg": "55"}, {"c": "PLKK48506", "n": "DECORATIVE LINE PACKET (TOWER)", "u": "piece", "pk": "6 pcs", "mc": "36 pcs", "q1": null, "q2": null, "pg": "55"}, {"c": "GW1850", "n": "GOLDEN WASHI TAPE (WASHI PAPER)", "u": "piece", "pk": "1 pcs", "mc": "96 pcs", "q1": 1728, "q2": null, "pg": "56"}, {"c": "GW2450", "n": "GOLDEN WASHI TAPE (WASHI PAPER)", "u": "piece", "pk": "1 pcs", "mc": "72 pcs", "q1": 1296, "q2": null, "pg": "56"}, {"c": "GW3050", "n": "GOLDEN WASHI TAPE (WASHI PAPER)", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 1080, "q2": null, "pg": "56"}, {"c": "GW3650", "n": "GOLDEN WASHI TAPE (WASHI PAPER)", "u": "piece", "pk": "1 pcs", "mc": "48 pcs", "q1": 864, "q2": null, "pg": "56"}, {"c": "GW4850", "n": "GOLDEN WASHI TAPE (WASHI PAPER)", "u": "piece", "pk": "1 pcs", "mc": "36 pcs", "q1": 648, "q2": null, "pg": "56"}, {"c": "BW3033", "n": "BRUTAL WASHI TAPE 90 DAYS UV (WASHI PAPER)", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 2880, "q2": null, "pg": "56"}, {"c": "BW4833", "n": "BRUTAL WASHI TAPE 90 DAYS UV (WASHI PAPER)", "u": "piece", "pk": "1 pcs", "mc": "36 pcs", "q1": 1764, "q2": null, "pg": "56"}, {"c": "GW185016", "n": "GOLDEN WASHI TAPE PACKET (TOWER) (WASHI PAPER)", "u": "piece", "pk": "16 pcs", "mc": "96 pcs", "q1": 1728, "q2": null, "pg": "57"}, {"c": "GW245012", "n": "GOLDEN WASHI TAPE PACKET (TOWER) (WASHI PAPER)", "u": "piece", "pk": "12 pcs", "mc": "72 pcs", "q1": 1296, "q2": null, "pg": "57"}, {"c": "GW305010", "n": "GOLDEN WASHI TAPE PACKET (TOWER) (WASHI PAPER)", "u": "piece", "pk": "10 pcs", "mc": "60 pcs", "q1": 1080, "q2": null, "pg": "57"}, {"c": "GW36580", "n": "GOLDEN WASHI TAPE PACKET (TOWER) (WASHI PAPER)", "u": "piece", "pk": "8 pcs", "mc": "48 pcs", "q1": null, "q2": null, "pg": "57"}, {"c": "GW48506", "n": "GOLDEN WASHI TAPE PACKET (TOWER) (WASHI PAPER)", "u": "piece", "pk": "6 pcs", "mc": "36 pcs", "q1": 648, "q2": null, "pg": "57"}, {"c": "SENW3033", "n": "SENSITIVE WASHI TAPE 21 DAYS UV (WASHI PAPER)", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 2460, "q2": null, "pg": "57"}, {"c": "SENW4833", "n": "SENSITIVE WASHI TAPE 21 DAYS UV (WASHI PAPER)", "u": "piece", "pk": "1 pcs", "mc": "36 pcs", "q1": 1476, "q2": null, "pg": "57"}, {"c": "STRONG1850", "n": "UNIVERSAL STRONG", "u": "piece", "pk": "1 pcs", "mc": "96 pcs", "q1": 2400, "q2": null, "pg": "58"}, {"c": "STRONG2450", "n": "UNIVERSAL STRONG", "u": "piece", "pk": "1 pcs", "mc": "72 pcs", "q1": 1872, "q2": null, "pg": "58"}, {"c": "STRONG3050", "n": "UNIVERSAL STRONG", "u": "piece", "pk": "1 pcs", "mc": "60 pcs", "q1": 1500, "q2": null, "pg": "58"}, {"c": "STRONG3650", "n": "UNIVERSAL STRONG", "u": "piece", "pk": "1 pcs", "mc": "48 pcs", "q1": 1200, "q2": null, "pg": "58"}, {"c": "STRONG4850", "n": "UNIVERSAL STRONG", "u": "piece", "pk": "1 pcs", "mc": "36 pcs", "q1": 936, "q2": null, "pg": "58"}, {"c": "STRONG185016", "n": "UNIVERSAL STRONG PACKET (TOWER)", "u": "piece", "pk": "16 pcs", "mc": "96 pcs", "q1": null, "q2": null, "pg": "59"}, {"c": "STRONG245012", "n": "UNIVERSAL STRONG PACKET (TOWER)", "u": "piece", "pk": "12 pcs", "mc": "72 pcs", "q1": null, "q2": null, "pg": "59"}, {"c": "STRONG305010", "n": "UNIVERSAL STRONG PACKET (TOWER)", "u": "piece", "pk": "10 pcs", "mc": "60 pcs", "q1": null, "q2": null, "pg": "59"}, {"c": "STRONG36508", "n": "UNIVERSAL STRONG PACKET (TOWER)", "u": "piece", "pk": "8 pcs", "mc": "48 pcs", "q1": null, "q2": null, "pg": "59"}, {"c": "STRONG48506", "n": "UNIVERSAL STRONG PACKET (TOWER)", "u": "piece", "pk": "6 pcs", "mc": "36 pcs", "q1": null, "q2": null, "pg": "59"}, {"c": "DT18X5", "n": "DOUBLE SIDED TAPE", "u": "piece", "pk": "16 pcs", "mc": "192 pcs", "q1": 11712, "q2": null, "pg": "59"}, {"c": "DT38X10", "n": "DOUBLE SIDED TAPE", "u": "piece", "pk": "96 pcs", "mc": "96 pcs", "q1": 2880, "q2": null, "pg": "59"}, {"c": "DT5", "n": "DOUBLE SIDED TAPE", "u": "piece", "pk": "3 pcs", "mc": "72 pcs", "q1": 4392, "q2": null, "pg": "59"}, {"c": "DT50X10", "n": "DOUBLE SIDED TAPE", "u": "piece", "pk": "72 pcs", "mc": "72 pcs", "q1": 2160, "q2": null, "pg": "59"}, {"c": "MT50X50", "n": "PACKING TAPE BROWN", "u": "piece", "pk": "6 pcs", "mc": "72 pcs", "q1": 2592, "q2": null, "pg": "60"}, {"c": "S50X50", "n": "PACKING TAPE TRANSPARENT", "u": "piece", "pk": "6 pcs", "mc": "72 pcs", "q1": 2592, "q2": null, "pg": "60"}, {"c": "AT10", "n": "ALUMINIUM TAPE", "u": "piece", "pk": "72 pcs", "mc": "72 pcs", "q1": 2448, "q2": null, "pg": "61"}, {"c": "AT50", "n": "ALUMINIUM TAPE", "u": "piece", "pk": "36 pcs", "mc": "36 pcs", "q1": 468, "q2": null, "pg": "61"}, {"c": "TT", "n": "DUCT TAPE", "u": "piece", "pk": "72 pcs", "mc": "72 pcs", "q1": 2736, "q2": null, "pg": "61"}, {"c": "TT20", "n": "DUCT TAPE", "u": "piece", "pk": "10 pcs", "mc": "20 pcs", "q1": 1500, "q2": null, "pg": "61"}, {"c": "TT50", "n": "DUCT TAPE", "u": "piece", "pk": "36 pcs", "mc": "36 pcs", "q1": 540, "q2": null, "pg": "61"}, {"c": "TTC", "n": "DUCT TAPE BLACK", "u": "piece", "pk": "72 pcs", "mc": "72 pcs", "q1": 2736, "q2": null, "pg": "62"}, {"c": "TTC20", "n": "DUCT TAPE BLACK", "u": "piece", "pk": "10 pcs", "mc": "20 pcs", "q1": 1500, "q2": null, "pg": "62"}, {"c": "TTB20", "n": "DUCT TAPE WHITE", "u": "piece", "pk": "10 pcs", "mc": "20 pcs", "q1": null, "q2": null, "pg": "62"}, {"c": "TTUOS20", "n": "ULTRA RESISTANT DUCT TAPE GRAY", "u": "piece", "pk": "10 pcs", "mc": "20 pcs", "q1": 1500, "q2": null, "pg": "63"}, {"c": "TTUOC20", "n": "ULTRA RESISTANT DUCT TAPE BLACK", "u": "piece", "pk": "10 pcs", "mc": "20 pcs", "q1": 1500, "q2": null, "pg": "63"}, {"c": "RTP20", "n": "REPAIR TAPE TRANSPARENT", "u": "piece", "pk": "10 pcs", "mc": "20 pcs", "q1": 1500, "q2": null, "pg": "64"}, {"c": "DNT1.5", "n": "DOUBLE SIDED NANO MOUNTING TAPE", "u": "piece", "pk": "12 pcs", "mc": "48 pcs", "q1": 1500, "q2": null, "pg": "65"}, {"c": "DFUT2", "n": "DOUBLE SIDED UNIVERSAL MOUNTING TAPE", "u": "piece", "pk": "12 pcs", "mc": "48 pcs", "q1": 1500, "q2": null, "pg": "65"}, {"c": "DFUJT2", "n": "DOUBLE SIDED ULTRA STRONG MOUNTING TAPE", "u": "piece", "pk": "12 pcs", "mc": "48 pcs", "q1": 1500, "q2": null, "pg": "65"}, {"c": "K1V", "n": "TILE CROSSES", "u": "piece", "pk": "100 pcs", "mc": "100 pcs", "q1": 3000, "q2": 6000, "pg": "71"}, {"c": "K2V", "n": "TILE CROSSES", "u": "piece", "pk": "100 pcs", "mc": "100 pcs", "q1": 4000, "q2": 8000, "pg": "71"}, {"c": "K3V", "n": "TILE CROSSES", "u": "piece", "pk": "100 pcs", "mc": "100 pcs", "q1": 4000, "q2": 8000, "pg": "71"}, {"c": "K4", "n": "TILE CROSSES", "u": "piece", "pk": "120 pcs", "mc": "120 pcs", "q1": 3000, "q2": 6000, "pg": "71"}, {"c": "K5", "n": "TILE CROSSES", "u": "piece", "pk": "120 pcs", "mc": "120 pcs", "q1": 3000, "q2": 6000, "pg": "71"}, {"c": "KAPV", "n": "TILE STICKS, 200 PIECES", "u": "piece", "pk": "25 pcs", "mc": "250 pcs", "q1": 3000, "q2": 6000, "pg": "71"}, {"c": "NK-100", "n": "TILE LEVELING WEDGES, 100 PIECES", "u": "piece", "pk": "15 pcs", "mc": "15 pcs", "q1": 3000, "q2": 6000, "pg": "71"}, {"c": "NS1-100", "n": "LINEAR SPACERS, 100 PIECES", "u": "piece", "pk": "25 pcs", "mc": "25 pcs", "q1": 5000, "q2": 10000, "pg": "71"}, {"c": "NS1.5-100", "n": "LINEAR SPACERS, 100 PIECES", "u": "piece", "pk": "25 pcs", "mc": "25 pcs", "q1": 5000, "q2": 10000, "pg": "71"}, {"c": "NS2-100", "n": "LINEAR SPACERS, 100 PIECES", "u": "piece", "pk": "25 pcs", "mc": "25 pcs", "q1": 5000, "q2": 10000, "pg": "71"}, {"c": "NS3-100", "n": "LINEAR SPACERS, 100 PIECES", "u": "piece", "pk": "25 pcs", "mc": "25 pcs", "q1": 5000, "q2": 10000, "pg": "71"}, {"c": "FPVCP", "n": "PVC BOWL, PROFESSIONAL", "u": "piece", "pk": "60 pcs", "mc": "60 pcs", "q1": 60, "q2": 2520, "pg": "74"}, {"c": "FPVC", "n": "PVC BOWL", "u": "piece", "pk": "40 pcs", "mc": "40 pcs", "q1": 40, "q2": 3560, "pg": "74"}, {"c": "DM2X3", "n": "WOODEN LADDERS", "u": "piece", "pk": "1 pcs", "mc": "25 pcs", "q1": null, "q2": null, "pg": "75"}, {"c": "DM2X4", "n": "WOODEN LADDERS", "u": "piece", "pk": "1 pcs", "mc": "25 pcs", "q1": null, "q2": null, "pg": "75"}, {"c": "DM2X5", "n": "WOODEN LADDERS", "u": "piece", "pk": "1 pcs", "mc": "25 pcs", "q1": null, "q2": null, "pg": "75"}, {"c": "DM2X6", "n": "WOODEN LADDERS", "u": "piece", "pk": "1 pcs", "mc": "25 pcs", "q1": null, "q2": null, "pg": "75"}, {"c": "DM2X7", "n": "WOODEN LADDERS", "u": "piece", "pk": "1 pcs", "mc": "25 pcs", "q1": null, "q2": null, "pg": "75"}];
+
+  var mkOrderItems = {};
+
+  function mkEscapeHtml(str){
+    var div = document.createElement('div');
+    div.textContent = str == null ? '' : str;
+    return div.innerHTML;
+  }
+
+var BW_URL = 'https://batinac.com/beorol';
+
+function bwToggleMain(){
+  var menu = document.getElementById('bwMainMenu');
+  if(menu.style.display === 'flex'){
+    bwCloseAll();
+  } else {
+    bwCloseAll();
+    menu.style.display = 'flex';
+  }
+}
+function bwShowKontakt(){
+  document.getElementById('bwSharePopup').style.display = 'none';
+  var p = document.getElementById('bwKontaktPopup');
+  p.style.display = (p.style.display === 'block') ? 'none' : 'block';
+}
+function bwShowShare(){
+  document.getElementById('bwKontaktPopup').style.display = 'none';
+  var p = document.getElementById('bwSharePopup');
+  p.style.display = (p.style.display === 'block') ? 'none' : 'block';
+}
+function bwCloseAll(){
+  document.getElementById('bwMainMenu').style.display = 'none';
+  document.getElementById('bwKontaktPopup').style.display = 'none';
+  document.getElementById('bwSharePopup').style.display = 'none';
+}
+document.addEventListener('click', function(e){
+  var btn = document.getElementById('bwMainBtn');
+  var main = document.getElementById('bwMainMenu');
+  var k = document.getElementById('bwKontaktPopup');
+  var s = document.getElementById('bwSharePopup');
+  if(!btn.contains(e.target) && !main.contains(e.target) && !k.contains(e.target) && !s.contains(e.target)){
+    bwCloseAll();
+  }
+});
+function bwShareNative(){
+  if(navigator.share){
+    navigator.share({ title:'Beorol – Poslovna ponuda', text:'Pozdrav, možda te zanima – zanimljiva poslovna ponuda i kvalitetni proizvodi iz Grupacije Beorol! 👇', url: BW_URL });
+  } else {
+    navigator.clipboard.writeText(BW_URL).then(function(){
+      var btn = document.querySelector('#bwSharePopup button');
+      var orig = btn.innerHTML;
+      btn.innerHTML = '<span class="bw-icon">✓</span> Link kopiran ✓';
+      setTimeout(function(){ btn.innerHTML = orig; }, 2000);
+    });
+  }
+}
+
+var bwMusicPlaying = false;
+var bwAutoStarted = false;
+var bwUserStopped = false;
+var bwAutoStarted = false;
+
+function bwSetPlayingUI(playing){
+  var btn = document.getElementById('bwMusicSubBtn');
+  var icon = document.getElementById('bwMusicIcon');
+  var label = document.getElementById('bwMusicLabel');
+  if(playing){
+    btn.classList.remove('bw-music-green');
+    btn.classList.add('bw-music-red');
+    icon.textContent = '⏹️';
+    label.textContent = 'Stop Music';
+  } else {
+    btn.classList.remove('bw-music-red');
+    btn.classList.add('bw-music-green');
+    icon.textContent = '▶️';
+    label.textContent = 'Play Music';
+  }
+}
+
+function bwToggleMusic(){
+  var audio = document.getElementById('bwBgMusic');
+  if(!bwMusicPlaying){
+    audio.play();
+    bwMusicPlaying = true;
+    bwUserStopped = false;
+  } else {
+    audio.pause();
+    bwMusicPlaying = false;
+    bwUserStopped = true;
+  }
+  bwSetPlayingUI(bwMusicPlaying);
+  bwSaveMusicState();
+}
+
+// ── Nastavak glazbe kroz stranice sajta (pamti vrijeme i status sviranja) ──
+function bwSaveMusicState(){
+  var audio = document.getElementById('bwBgMusic');
+  try{
+    localStorage.setItem('bwMusicState', JSON.stringify({
+      time: audio.currentTime || 0,
+      playing: bwMusicPlaying,
+      stopped: bwUserStopped
+    }));
+  }catch(e){}
+}
+
+function bwRestoreMusicState(){
+  var audio = document.getElementById('bwBgMusic');
+  var saved = null;
+  try{ saved = JSON.parse(localStorage.getItem('bwMusicState')); }catch(e){}
+  if(!saved) return;
+
+  if(saved.stopped){
+    bwUserStopped = true;
+    bwAutoStarted = true;
+    return;
+  }
+
+  function applyTime(){
+    if(saved.time && !isNaN(saved.time)){
+      audio.currentTime = saved.time;
+    }
+  }
+  if(audio.readyState >= 1){
+    applyTime();
+  } else {
+    audio.addEventListener('loadedmetadata', applyTime, { once:true });
+  }
+
+  if(saved.playing){
+    audio.play().then(function(){
+      bwMusicPlaying = true;
+      bwAutoStarted = true;
+      bwSetPlayingUI(true);
+    }).catch(function(){
+      // Autoplay blokiran - glazba će nastaviti sa spremljene pozicije na prvi klik
+      bwMusicPlaying = false;
+    });
+  }
+}
+bwRestoreMusicState();
+
+// Autoplay glazbe na prvi klik (zaobilazi browser autoplay blokadu) — ali NE ako je korisnik ugasio
+document.addEventListener('click', function(){
+  if(bwAutoStarted || bwUserStopped) return;
+  bwAutoStarted = true;
+  if(!bwMusicPlaying){
+    var audio = document.getElementById('bwBgMusic');
+    audio.play().then(function(){
+      bwMusicPlaying = true;
+      bwSetPlayingUI(true);
+      bwSaveMusicState();
+    }).catch(function(){});
+  }
+}, { once:false });
+
+// Redovito spremaj poziciju i status (svake sekunde, i prije napuštanja stranice)
+setInterval(bwSaveMusicState, 1000);
+window.addEventListener('pagehide', bwSaveMusicState);
+window.addEventListener('beforeunload', bwSaveMusicState);
+</script>
+<!-- ========== /BEOROL IZBORNIK WIDGET ========== -->
+
+<script>
+  function mkRenderResults(query){
+    var q = query.trim().toLowerCase();
+    var results = document.getElementById('mkProdResults');
+    results.innerHTML = '';
+    if(q.length < 2) return;
+
+    var matches = MK_PRODUCTS.filter(function(p){
+      return p.c.toLowerCase().indexOf(q) !== -1 ||
+             p.n.toLowerCase().indexOf(q) !== -1;
+    }).slice(0, 25);
+
+    if(matches.length === 0){
+      results.innerHTML = '<div class="mk-prod-empty">Nema rezultata za "' + mkEscapeHtml(query) + '".</div>';
+      return;
+    }
+
+    matches.forEach(function(p){
+      var row = document.createElement('div');
+      row.className = 'mk-prod-row';
+
+      var meta = ['Šifra: <b>' + mkEscapeHtml(p.c) + '</b>'];
+      if(p.mc) meta.push('Master karton: <b>' + mkEscapeHtml(p.mc) + '</b>');
+      if(p.q1) meta.push('MOQ (PL): <b>' + p.q1 + '</b>');
+      if(p.q2) meta.push('MOQ (PL+boja): <b>' + p.q2 + '</b>');
+      if(p.pg) meta.push('Str. <b>' + mkEscapeHtml(p.pg) + '</b>');
+
+      var pillsHtml = '';
+      if(p.q1){
+        pillsHtml += '<button type="button" class="mk-qty-pill" data-qty="' + p.q1 + '" style="border-color:var(--accent-blue);color:var(--accent-blue);">MOQ 1: ' + p.q1 + '</button>';
+      }
+      if(p.q2){
+        pillsHtml += '<button type="button" class="mk-qty-pill" data-qty="' + p.q2 + '" style="border-color:var(--accent-blue-dark);color:var(--accent-blue-dark);">MOQ 2: ' + p.q2 + '</button>';
+      }
+      if(p.q1){
+        pillsHtml += '<button type="button" class="mk-qty-pill" data-qty="' + (p.q1*2) + '">MOQ 1 x2: ' + (p.q1*2) + '</button>';
+        pillsHtml += '<button type="button" class="mk-qty-pill" data-qty="' + (p.q1*3) + '">MOQ 1 x3: ' + (p.q1*3) + '</button>';
+        pillsHtml += '<button type="button" class="mk-qty-pill" data-qty="' + (p.q1*5) + '">MOQ 1 x5: ' + (p.q1*5) + '</button>';
+      }
+
+      row.innerHTML =
+        '<div class="mk-prod-name">' + mkEscapeHtml(p.n) + '</div>' +
+        '<div class="mk-prod-meta">' + meta.join(' · ') + '</div>' +
+        '<div class="mk-prod-qty-options">' + pillsHtml + '</div>' +
+        '<div class="mk-prod-add-custom">' +
+          '<input type="number" min="1" placeholder="količina" class="mk-prod-qty-input">' +
+          '<select class="mk-prod-interval-select">' +
+            '<option value="Tjedno">Tjedno</option>' +
+            '<option value="Mjesečno" selected>Mjesečno</option>' +
+            '<option value="Kvartalno">Kvartalno</option>' +
+            '<option value="Godišnje">Godišnje</option>' +
+            '<option value="Po dogovoru">Po dogovoru</option>' +
+          '</select>' +
+          '<button type="button" class="mk-prod-add-btn">+ Dodaj</button>' +
+        '</div>';
+
+      var pillButtons = row.querySelectorAll('.mk-qty-pill');
+      var qtyInput = row.querySelector('.mk-prod-qty-input');
+      var intervalSelect = row.querySelector('.mk-prod-interval-select');
+
+      pillButtons.forEach(function(btn){
+        btn.addEventListener('click', function(){
+          pillButtons.forEach(function(b){ b.classList.remove('selected'); });
+          btn.classList.add('selected');
+          qtyInput.value = '';
+        });
+      });
+      qtyInput.addEventListener('input', function(){
+        if(qtyInput.value) pillButtons.forEach(function(b){ b.classList.remove('selected'); });
+      });
+
+      row.querySelector('.mk-prod-add-btn').addEventListener('click', function(){
+        var selectedPill = row.querySelector('.mk-qty-pill.selected');
+        var qty = selectedPill ? parseInt(selectedPill.getAttribute('data-qty'),10) : parseInt(qtyInput.value,10);
+        if(!qty || qty < 1){ qtyInput.focus(); return; }
+        mkAddToOrder(p, qty, intervalSelect.value);
+        pillButtons.forEach(function(b){ b.classList.remove('selected'); });
+        qtyInput.value = '';
+      });
+      results.appendChild(row);
+    });
+  }
+
+  function mkAddToOrder(p, qty, interval){
+    if(mkOrderItems[p.c]){
+      mkOrderItems[p.c].qty += qty;
+      mkOrderItems[p.c].interval = interval;
+    } else {
+      mkOrderItems[p.c] = { code: p.c, name: p.n, qty: qty, interval: interval };
+    }
+    mkRenderOrder();
+  }
+
+  function mkRemoveFromOrder(code){
+    delete mkOrderItems[code];
+    mkRenderOrder();
+  }
+
+  function mkRenderOrder(){
+    var list = document.getElementById('mkOrderList');
+    var empty = document.getElementById('mkOrderEmpty');
+    var countEl = document.getElementById('mkOrderCount');
+    var codes = Object.keys(mkOrderItems);
+    countEl.textContent = codes.length;
+    list.innerHTML = '';
+    if(codes.length === 0){ empty.style.display = 'block'; return; }
+    empty.style.display = 'none';
+    codes.forEach(function(code){
+      var item = mkOrderItems[code];
+      var row = document.createElement('div');
+      row.className = 'mk-order-row';
+      row.innerHTML =
+        '<div class="mk-order-row-name">' + mkEscapeHtml(item.name) +
+          ' <span class="mk-order-row-code">(' + mkEscapeHtml(item.code) + ')</span></div>' +
+        '<input type="number" min="1" value="' + item.qty + '" class="mk-order-qty-input">' +
+        '<select class="mk-prod-interval-select">' +
+          '<option value="Tjedno"' + (item.interval === 'Tjedno' ? ' selected' : '') + '>Tjedno</option>' +
+          '<option value="Mjesečno"' + (item.interval === 'Mjesečno' ? ' selected' : '') + '>Mjesečno</option>' +
+          '<option value="Kvartalno"' + (item.interval === 'Kvartalno' ? ' selected' : '') + '>Kvartalno</option>' +
+          '<option value="Godišnje"' + (item.interval === 'Godišnje' ? ' selected' : '') + '>Godišnje</option>' +
+          '<option value="Po dogovoru"' + (item.interval === 'Po dogovoru' ? ' selected' : '') + '>Po dogovoru</option>' +
+        '</select>' +
+        '<button type="button" class="mk-order-remove-btn">✕</button>';
+      row.querySelector('.mk-order-qty-input').addEventListener('change', function(e){
+        mkOrderItems[code].qty = parseInt(e.target.value, 10) || 1;
+      });
+      row.querySelector('.mk-prod-interval-select').addEventListener('change', function(e){
+        mkOrderItems[code].interval = e.target.value;
+      });
+      row.querySelector('.mk-order-remove-btn').addEventListener('click', function(){
+        mkRemoveFromOrder(code);
+      });
+      list.appendChild(row);
+    });
+  }
+
+  document.getElementById('mkProdSearch').addEventListener('input', function(e){
+    mkRenderResults(e.target.value);
+  });
+
+  // Topic dropdown summary update
+  var mkTopicItems = document.querySelectorAll('.mk-topic-item input');
+
+  // === REVIEW / EDIT TOGGLE ===
+  var mkReviewBtn = document.getElementById('mkReviewBtn');
+  var mkEditBtn = document.getElementById('mkEditBtn');
+  var mkOrderReview = document.getElementById('mkOrderReview');
+
+  function mkSetReviewMode(show){
+    mkOrderReview.style.display = show ? 'block' : 'none';
+    mkReviewBtn.style.display = show ? 'none' : 'flex';
+    mkEditBtn.style.display = show ? 'flex' : 'none';
+  }
+
+  if(mkReviewBtn){
+    mkReviewBtn.addEventListener('click', function(){
+      var business = document.getElementById('mkBusiness').value.trim();
+      var name = document.getElementById('mkName').value.trim();
+      var surname = document.getElementById('mkSurname').value.trim();
+      var email = document.getElementById('mkEmail').value.trim();
+      var codes = Object.keys(mkOrderItems);
+
+      if(!business || !name || !surname || !email){
+        alert('Molimo popunite obavezna polja (poslovni subjekt, ime, prezime, email).');
+        return;
+      }
+
+      var oib = document.getElementById('mkOIB').value.trim();
+      var address = document.getElementById('mkAddress').value.trim();
+      var city = document.getElementById('mkCity').value.trim();
+      var zip = document.getElementById('mkZip').value.trim();
+      var county = document.getElementById('mkCounty').value;
+      var phone = document.getElementById('mkPhone').value.trim();
+      var frequency = document.getElementById('mkFrequency').value;
+      var brand = document.getElementById('mkBrand').value.trim();
+      var project = document.getElementById('mkProject').value.trim();
+
+      var lines = codes.map(function(code){
+        var item = mkOrderItems[code];
+        return '• ' + mkEscapeHtml(item.name) + ' (' + mkEscapeHtml(item.code) + ') — ' + item.qty + ' kom (' + (item.interval||'Mjesečno') + ')';
+      });
+
+      var html =
+        '<div style="font-size:13px;line-height:1.6;color:var(--graphite);margin-bottom:8px;"><b>Poslovni subjekt:</b> ' + mkEscapeHtml(business) + '</div>' +
+        (oib ? '<div style="font-size:13px;line-height:1.6;color:var(--graphite);margin-bottom:8px;"><b>OIB / VAT:</b> ' + mkEscapeHtml(oib) + '</div>' : '') +
+        (address ? '<div style="font-size:13px;line-height:1.6;color:var(--graphite);margin-bottom:8px;"><b>Adresa:</b> ' + mkEscapeHtml(address) + ', ' + mkEscapeHtml(zip) + ' ' + mkEscapeHtml(city) + (county ? ' (' + mkEscapeHtml(county) + ')' : '') + '</div>' : '') +
+        '<div style="font-size:13px;line-height:1.6;color:var(--graphite);margin-bottom:8px;"><b>Kontakt:</b> ' + mkEscapeHtml(name) + ' ' + mkEscapeHtml(surname) + ' · ' + mkEscapeHtml(email) + (phone ? ' · ' + mkEscapeHtml(phone) : '') + '</div>' +
+        (frequency ? '<div style="font-size:13px;line-height:1.6;color:var(--graphite);margin-bottom:8px;"><b>Učestalost:</b> ' + mkEscapeHtml(frequency) + '</div>' : '') +
+        (brand ? '<div style="font-size:13px;line-height:1.6;color:var(--graphite);margin-bottom:8px;"><b>Robna marka:</b> ' + mkEscapeHtml(brand) + '</div>' : '') +
+        (project ? '<div style="font-size:13px;line-height:1.6;color:var(--graphite);margin-bottom:8px;"><b>Projekt:</b> ' + mkEscapeHtml(project) + '</div>' : '') +
+        (codes.length > 0 ? '<div style="font-size:13px;line-height:1.6;color:var(--graphite);"><b>Proizvodi:</b><br>' + lines.join('<br>') + '</div>' : '<div style="font-size:13px;color:var(--grey);">(Nema odabranih proizvoda)</div>');
+
+      document.getElementById('mkOrderReviewContent').innerHTML = html;
+      mkSetReviewMode(true);
+      mkOrderReview.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  if(mkEditBtn){
+    mkEditBtn.addEventListener('click', function(){
+      mkSetReviewMode(false);
+    });
+  }
+  mkTopicItems.forEach(function(cb){
+    cb.addEventListener('change', function(){
+      var checked = document.querySelectorAll('.mk-topic-item input:checked');
+      var summary = document.getElementById('mkTopicSummary');
+      if(checked.length === 0){
+        summary.textContent = 'Odaberite teme koje Vas zanimaju…';
+        summary.classList.remove('has-selection');
+      } else {
+        var names = [];
+        checked.forEach(function(c){ names.push(c.value); });
+        summary.textContent = names.join(', ');
+        summary.classList.add('has-selection');
+      }
+    });
+  });
+  </script>
+
+<script>
+  function posaljiMkFormu(){
+    var business = document.getElementById('mkBusiness').value.trim();
+    var oib = document.getElementById('mkOIB').value.trim();
+    var address = document.getElementById('mkAddress').value.trim();
+    var city = document.getElementById('mkCity').value.trim();
+    var zip = document.getElementById('mkZip').value.trim();
+    var county = document.getElementById('mkCounty').value;
+    var name = document.getElementById('mkName').value.trim();
+    var surname = document.getElementById('mkSurname').value.trim();
+    var email = document.getElementById('mkEmail').value.trim();
+    var phone = document.getElementById('mkPhone').value.trim();
+    var frequency = document.getElementById('mkFrequency').value;
+    var brand = document.getElementById('mkBrand').value.trim();
+    var project = document.getElementById('mkProject').value.trim();
+
+    var productCbs = document.querySelectorAll('.mkProdCb:checked');
+    var products = [];
+    productCbs.forEach(function(cb){ products.push(cb.value); });
+    var product = products.length ? products.join(', ') : '—';
+
+    var orderLines = [];
+    Object.keys(mkOrderItems).forEach(function(code){
+      var item = mkOrderItems[code];
+      orderLines.push(item.code + ' | ' + item.name + ' | ' + item.qty + ' kom | ' + (item.interval || 'Mjesečno'));
+    });
+    var orderText = orderLines.length ? orderLines.join('\n') : '(nije odabrano)';
+
+    var message = document.getElementById('mkMessage').value.trim();
+
+    var topicCbs = document.querySelectorAll('.mk-topic-item input:checked');
+    var topics = [];
+    topicCbs.forEach(function(cb){ topics.push(cb.value); });
+    var topicsText = topics.length ? topics.join(', ') : '—';
+
+    if(!business || !name || !surname || !email){
+      alert('Molimo popunite obavezna polja (poslovni subjekt, ime, prezime, email).');
+      return;
+    }
+
+    var btn = document.getElementById('mkSendBtn');
+    btn.disabled = true;
+    btn.textContent = 'Šaljem...';
+
+    var body = {
+      'Poslovni subjekt': business,
+      'OIB/VAT': oib || '—',
+      'Adresa': address || '—',
+      'Grad': city || '—',
+      'Poštanski broj': zip || '—',
+      'Županija': county || '—',
+      'Ime': name,
+      'Prezime': surname,
+      'email': email,
+      'Telefon': phone || '—',
+      'Učestalost': frequency || '—',
+      'Robna marka': brand || '—',
+      'Projekt': project || '—',
+      'Kategorije': product || '—',
+      'Narudžba': orderText,
+      'Teme': topicsText,
+      'Poruka': message || '—',
+      '_subject': 'Beorol Prima upit: ' + business
+    };
+
+    var cid = getCid();
+    if(cid) body.cid = cid;
+
+    fetch('https://formspree.io/f/moeqaqzd', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(body)
+    })
+    .then(function(r){
+      if(r.ok){
+        try {
+          saveUpit({
+            cid: body.cid || '',
+            izvor: 'marka',
+            tvrtka: business,
+            ime: name + ' ' + surname,
+            email: email,
+            telefon: phone || '',
+            proizvodi: orderText,
+            poruka: message || '',
+            teme: topicsText
+          });
+        } catch(e){}
+
+        document.getElementById('mkFormFields').style.display = 'none';
+        document.getElementById('mkOrderReview').style.display = 'none';
+        document.getElementById('mkReviewBtn').style.display = 'none';
+        document.getElementById('mkEditBtn').style.display = 'none';
+        var msg = document.getElementById('mkFormMsg');
+        msg.style.display = 'block';
+        msg.textContent = 'Hvala! Vaš upit je zaprimljen. Javit ćemo Vam se u najkraćem roku.';
+      } else {
+        return r.text().then(function(txt){
+          alert('Greška (' + r.status + '): ' + txt);
+          btn.disabled = false;
+          btn.textContent = '✓ Potvrdi i pošalji upit';
+        });
+      }
+    })
+    .catch(function(err){
+      alert('Greška pri slanju: ' + err.message);
+      btn.disabled = false;
+      btn.textContent = '✓ Potvrdi i pošalji upit';
+    });
+  }
+</script>
+
+
+<script>logVisit("marka");</script>
+</body>
+</html>
