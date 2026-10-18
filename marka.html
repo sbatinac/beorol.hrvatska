@@ -607,12 +607,22 @@
   }
   .pg-logo{ width:88px; height:auto; margin:0 0 20px; }
   .pg-card h1{
-    font-family:'Oswald',sans-serif; font-size:34px; font-weight:700;
-    line-height:1.12; letter-spacing:.3px; text-transform:uppercase;
-    color:#0D0D0D; margin:0 0 14px;
+    margin:0 0 14px;
+    font-family:'Oswald',sans-serif; font-weight:700;
+    text-transform:uppercase; color:#0D0D0D;
+  }
+  .pg-rijec{
+    display:block;
+    font-size:54px; line-height:1; letter-spacing:1px;
+  }
+  .pg-ostatak{
+    display:block; margin-top:6px;
+    font-size:16px; line-height:1.25; letter-spacing:.6px;
+    font-weight:600; color:#4A4A4A;
   }
   @media (max-width:420px){
-    .pg-card h1{ font-size:27px; }
+    .pg-rijec{ font-size:42px; }
+    .pg-ostatak{ font-size:14px; }
   }
   .pg-card p{
     font-family:'Inter',sans-serif; font-size:12.5px; line-height:1.6;
@@ -657,7 +667,7 @@
 <div id="pgGate">
   <div class="pg-card">
     <img class="pg-logo" src="slike/izbornik-logo.png" alt="Beorol">
-    <h1>Vrata prema Vašoj robnoj marci</h1>
+    <h1><span class="pg-rijec">Vrata</span><span class="pg-ostatak">prema Vašoj robnoj marci</span></h1>
     <p>Ponuda je dostupna uz pristupnu lozinku. Za pristup kontaktirajte
       predstavnika u Republici Hrvatskoj:<br>
       <a class="pg-kontakt" href="tel:+385913584122">091 358 4122</a><br>
