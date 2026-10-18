@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beorol Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF; --card:#FFFFFF; --graphite:#0D0D0D; --graphite-soft:#4A4A4A;
+    --grey:#888; --blue:#1547B0; --blue-dark:#103B90; --blue-light:#E9EFFB;
+    --red:#E2231A; --red-light:#FBEAE9; --line:#E3E3E3; --green:#16A34A;
+    --font-display:'Oswald',sans-serif; --font-body:'Inter',sans-serif;
+    --font-mono:'IBM Plex Mono',monospace;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{ font-family:var(--font-body); background:var(--bg); color:var(--graphite); }
+
+  .topbar{
+    background:var(--graphite); padding:16px 28px; display:flex; align-items:center; justify-content:space-between;
+  }
+  .topbar-title{
+    font-family:var(--font-display); font-weight:700; font-size:18px; color:#fff;
+    letter-spacing:1px; text-transform:uppercase;
+  }
+  .topbar-title span{ color:var(--red); }
+  .topbar-subtitle{ font-family:var(--font-mono); font-size:10px; color:rgba(255,255,255,.6); letter-spacing:.5px; }
+  .topbar-right{ display:flex; align-items:center; gap:10px; }
+  .topbar-back{
+    font-family:var(--font-mono); font-size:10px; font-weight:700; color:rgba(255,255,255,.7);
+    text-decoration:none; letter-spacing:.3px;
+  }
+  .topbar-back:hover{ color:#fff; }
+
+  .container{ max-width:1200px; margin:0 auto; padding:24px 20px; }
+
+  .stats-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; margin-bottom:28px; }
+  .stat-box{
+    background:var(--bg); border:1.5px solid var(--line); border-radius:12px;
+    padding:18px 14px; text-align:center; transition:border-color .15s ease;
+  }
+  .stat-box:hover{ border-color:var(--blue); }
+  .stat-box.accent-red{ border-left:4px solid var(--red); }
+  .stat-box.accent-blue{ border-left:4px solid var(--blue); }
+  .stat-num{ font-family:var(--font-display); font-size:32px; font-weight:700; line-height:1; }
+  .stat-num.blue{ color:var(--blue); }
+  .stat-num.red{ color:var(--red); }
+  .stat-label{
+    font-family:var(--font-mono); font-size:9.5px; font-weight:700; color:var(--grey);
+    text-transform:uppercase; letter-spacing:.6px; margin-top:6px;
+  }
+
+  .tabs{
+    display:flex; gap:0; margin-bottom:0; border-bottom:2px solid var(--line);
+    align-items:center;
+  }
+  .tab{
+    padding:12px 24px; cursor:pointer; font-family:var(--font-mono); font-size:11px;
+    font-weight:700; letter-spacing:.4px; text-transform:uppercase; color:var(--grey);
+    border-bottom:3px solid transparent; margin-bottom:-2px; transition:color .15s ease;
+  }
+  .tab:hover{ color:var(--graphite); }
+  .tab.active{ color:var(--blue); border-bottom-color:var(--blue); }
+
+  .refresh-btn{
+    background:var(--red); color:#fff; border:none; padding:8px 18px; border-radius:8px;
+    font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:.4px;
+    text-transform:uppercase; cursor:pointer; margin-left:auto; transition:background .15s ease;
+  }
+  .refresh-btn:hover{ background:#C41E17; }
+
+  .panel{ display:none; padding:20px 0; }
+  .panel.active{ display:block; }
+
+  .filter-bar{ display:flex; gap:8px; margin-bottom:14px; flex-wrap:wrap; }
+  .filter-bar input, .filter-bar select{
+    font-family:var(--font-body); font-size:13px; padding:9px 14px;
+    border:1.5px solid var(--line); border-radius:8px; outline:none; background:#fff;
+  }
+  .filter-bar input:focus{ border-color:var(--blue); }
+
+  .table-wrap{
+    max-height:500px; overflow-y:auto; border:1.5px solid var(--line); border-radius:10px;
+    background:#fff;
+  }
+  table{ width:100%; border-collapse:collapse; font-size:12px; }
+  th{
+    text-align:left; padding:10px 12px; background:#FAFAFA;
+    font-family:var(--font-mono); font-weight:700; font-size:10px;
+    text-transform:uppercase; letter-spacing:.5px; color:var(--grey);
+    border-bottom:2px solid var(--line); position:sticky; top:0; z-index:1;
+  }
+  td{ padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:hover td{ background:var(--blue-light); }
+  .mono{ font-family:var(--font-mono); font-size:11px; }
+  .cid-link{ color:var(--blue); cursor:pointer; text-decoration:underline; font-weight:600; }
+  .badge{
+    display:inline-block; padding:3px 10px; border-radius:12px;
+    font-family:var(--font-mono); font-size:9px; font-weight:700;
+    text-transform:uppercase; letter-spacing:.5px;
+  }
+  .badge-index{ background:#F0F0F0; color:#555; }
+  .badge-proizvodi{ background:var(--red-light); color:var(--red); }
+  .badge-marka{ background:var(--blue-light); color:var(--blue); }
+
+  .upit-card{
+    background:#fff; border:1.5px solid var(--line); border-radius:12px;
+    padding:18px 20px; margin-bottom:12px; transition:border-color .15s ease;
+  }
+  .upit-card:hover{ border-color:var(--blue); }
+  .upit-header{ display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px; }
+  .upit-company{ font-family:var(--font-display); font-weight:700; font-size:18px; }
+  .upit-date{ font-family:var(--font-mono); font-size:10px; color:var(--grey); }
+  .upit-row{ font-size:13px; line-height:1.7; color:var(--graphite-soft); margin-bottom:2px; }
+  .upit-row b{ color:var(--graphite); }
+  .upit-badge-marka{
+    background:var(--blue); color:#fff; padding:3px 12px; border-radius:12px;
+    font-family:var(--font-mono); font-size:9px; font-weight:700; letter-spacing:.5px;
+  }
+  .upit-badge-proizvodi{
+    background:var(--red); color:#fff; padding:3px 12px; border-radius:12px;
+    font-family:var(--font-mono); font-size:9px; font-weight:700; letter-spacing:.5px;
+  }
+
+  .cid-history-title{
+    font-family:var(--font-display); font-size:20px; font-weight:700; margin-bottom:6px;
+  }
+  .cid-history-title span{ color:var(--blue); }
+  .cid-stats{
+    font-family:var(--font-mono); font-size:11px; color:var(--grey); margin-bottom:18px;
+  }
+  .cid-section-title{
+    font-family:var(--font-display); font-size:14px; font-weight:600; text-transform:uppercase;
+    color:var(--graphite); margin-bottom:8px; border-left:3px solid var(--red); padding-left:10px;
+  }
+
+  .loading{ text-align:center; padding:40px; color:var(--grey); font-size:13px; font-family:var(--font-mono); }
+  .divider{ height:2px; background:var(--line); border:none; margin:20px 0; }
+
+  @media (max-width:640px){
+    .stats-grid{ grid-template-columns:repeat(2,1fr); }
+    .tab{ padding:10px 14px; font-size:10px; }
+  }
+</style>
+
+<div class="topbar">
+  <div>
+    <div class="topbar-title">BEOROL <span>ADMIN</span></div>
+    <div class="topbar-subtitle">Praćenje posjeta i upita</div>
+  </div>
+  <div class="topbar-right">
+    <a class="topbar-back" href="<?= baseUrl ?>">← Portal</a>
+    <a class="topbar-back" href="<?= baseUrl ?>?page=admin" style="color:var(--red);opacity:1;">⏻ Odjava</a>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="stats-grid">
+  <div class="stat-box accent-red"><div class="stat-num red" id="sDanas">—</div><div class="stat-label">Danas</div></div>
+  <div class="stat-box accent-blue"><div class="stat-num blue" id="sTjedan">—</div><div class="stat-label">Ovaj tjedan</div></div>
+  <div class="stat-box"><div class="stat-num blue" id="sUkupno">—</div><div class="stat-label">Ukupno posjeta</div></div>
+  <div class="stat-box"><div class="stat-num blue" id="sUnique">—</div><div class="stat-label">Jedinstveni CID</div></div>
+  <div class="stat-box accent-red"><div class="stat-num red" id="sUpiti">—</div><div class="stat-label">Upiti</div></div>
+  <div class="stat-box"><div class="stat-num" style="color:var(--graphite);" id="sIndex">—</div><div class="stat-label">Index</div></div>
+  <div class="stat-box accent-red"><div class="stat-num red" id="sProizvodi">—</div><div class="stat-label">Proizvodi</div></div>
+  <div class="stat-box accent-blue"><div class="stat-num blue" id="sMarka">—</div><div class="stat-label">Marka</div></div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('posjeti')">Posjeti</div>
+  <div class="tab" onclick="showTab('upiti')">Upiti</div>
+  <div class="tab" onclick="showTab('cid')">CID Praćenje</div>
+  <button class="refresh-btn" onclick="loadData()">↻ Osvježi</button>
+</div>
+
+<div style="display:flex;gap:8px;justify-content:flex-end;padding:12px 0 0;">
+  <button onclick="resetTab('Interesi')" style="background:none;border:1.5px solid var(--line);color:var(--grey);padding:6px 14px;border-radius:6px;font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;cursor:pointer;transition:all .15s ease;" onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--red)'" onmouseout="this.style.borderColor='var(--line)';this.style.color='var(--grey)'">🗑 Obriši posjete</button>
+  <button onclick="resetTab('Upiti')" style="background:none;border:1.5px solid var(--line);color:var(--grey);padding:6px 14px;border-radius:6px;font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;cursor:pointer;transition:all .15s ease;" onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--red)'" onmouseout="this.style.borderColor='var(--line)';this.style.color='var(--grey)'">🗑 Obriši upite</button>
+</div>
+
+<div class="panel active" id="panelPosjeti">
+  <div class="filter-bar">
+    <input type="text" id="filterCid" placeholder="Filtriraj po CID..." oninput="renderPosjeti()">
+    <select id="filterStranica" onchange="renderPosjeti()">
+      <option value="">Sve stranice</option>
+      <option value="index">Index</option>
+      <option value="proizvodi">Proizvodi</option>
+      <option value="marka">Marka</option>
+    </select>
+  </div>
+  <div class="table-wrap">
+    <table><thead><tr><th>Datum i vrijeme</th><th>CID</th><th>Stranica</th><th>Ref</th></tr></thead>
+    <tbody id="posjetiBody"></tbody></table>
+  </div>
+</div>
+
+<div class="panel" id="panelUpiti">
+  <div class="filter-bar">
+    <input type="text" id="filterUpitCid" placeholder="Filtriraj po tvrtki, imenu, e-mailu ili CID-u..." oninput="renderUpiti()">
+    <select id="filterIzvor" onchange="renderUpiti()">
+      <option value="">Svi upiti</option>
+      <option value="proizvodi">Beorol asortiman</option>
+      <option value="marka">Beorol Prima</option>
+    </select>
+  </div>
+  <div id="upitiList"><div class="loading">Učitavam...</div></div>
+</div>
+
+<div class="panel" id="panelCid">
+  <div class="filter-bar">
+    <input type="text" id="cidSearch" placeholder="Unesite CID za pregled povijesti..." oninput="renderCid()">
+  </div>
+  <div id="cidResult"></div>
+</div>
+
+</div>
+
+<script>
+var DATA = null;
+
+function loadData(){
+  document.getElementById('posjetiBody').innerHTML = '<tr><td colspan="4" class="loading">Učitavam...</td></tr>';
+  document.getElementById('upitiList').innerHTML = '<div class="loading">Učitavam...</div>';
+  google.script.run.withSuccessHandler(function(d){
+    DATA = d;
+    renderStats();
+    renderPosjeti();
+    renderUpiti();
+  }).withFailureHandler(function(err){
+    alert('Greška: ' + err.message);
+  }).getAdminData();
+}
+
+function renderStats(){
+  if(!DATA || !DATA.stats) return;
+  var s = DATA.stats;
+  document.getElementById('sDanas').textContent = s.danas || 0;
+  document.getElementById('sTjedan').textContent = s.tjedan || 0;
+  document.getElementById('sUkupno').textContent = s.ukupno || 0;
+  document.getElementById('sUnique').textContent = s.unique || 0;
+  document.getElementById('sUpiti').textContent = DATA.upiti ? DATA.upiti.length : 0;
+  document.getElementById('sIndex').textContent = (s.stranice && s.stranice.index) || 0;
+  document.getElementById('sProizvodi').textContent = (s.stranice && s.stranice.proizvodi) || 0;
+  document.getElementById('sMarka').textContent = (s.stranice && s.stranice.marka) || 0;
+}
+
+function renderPosjeti(){
+  if(!DATA) return;
+  var cid = document.getElementById('filterCid').value.toLowerCase();
+  var str = document.getElementById('filterStranica').value;
+  var rows = DATA.posjeti.filter(function(p){
+    if(cid && p.cid.toLowerCase().indexOf(cid) === -1) return false;
+    if(str && p.stranica !== str) return false;
+    return true;
+  });
+  var html = '';
+  rows.forEach(function(p){
+    var d = p.timestamp ? new Date(p.timestamp) : null;
+    var dt = d ? d.toLocaleString('hr-HR') : '—';
+    var badge = 'badge-' + (p.stranica || 'index');
+    html += '<tr><td class="mono">' + dt + '</td>' +
+      '<td><span class="cid-link" onclick="showCidHistory(\'' + p.cid + '\')">' + p.cid + '</span></td>' +
+      '<td><span class="badge ' + badge + '">' + (p.stranica || 'index') + '</span></td>' +
+      '<td>' + (p.ref || '') + '</td></tr>';
+  });
+  if(!html) html = '<tr><td colspan="4" style="text-align:center;color:#888;padding:20px;">Nema rezultata</td></tr>';
+  document.getElementById('posjetiBody').innerHTML = html;
+}
+
+function renderUpiti(){
+  if(!DATA || !DATA.upiti) return;
+  var list = document.getElementById('upitiList');
+  if(DATA.upiti.length === 0){
+    list.innerHTML = '<div class="loading">Nema zaprimljenih upita</div>';
+    return;
+  }
+
+  var qEl = document.getElementById('filterUpitCid');
+  var izEl = document.getElementById('filterIzvor');
+  var q = qEl ? qEl.value.trim().toLowerCase() : '';
+  var izvor = izEl ? izEl.value : '';
+
+  var rows = DATA.upiti.filter(function(u){
+    if(izvor){
+      var uIzvor = (u.izvor === 'marka') ? 'marka' : 'proizvodi';
+      if(uIzvor !== izvor) return false;
+    }
+    if(q){
+      var hay = [u.tvrtka, u.ime, u.email, u.telefon, u.cid, u.proizvodi, u.teme, u.poruka]
+        .join(' ').toLowerCase();
+      if(hay.indexOf(q) === -1) return false;
+    }
+    return true;
+  });
+
+  if(rows.length === 0){
+    list.innerHTML = '<div class="loading">Nema upita koji odgovaraju filteru</div>';
+    return;
+  }
+
+  var brojProizvodi = 0, brojMarka = 0;
+  rows.forEach(function(u){ if(u.izvor === 'marka') brojMarka++; else brojProizvodi++; });
+
+  var html = '<div style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--grey);padding:4px 2px 12px;">'
+    + 'Prikazano ' + rows.length + ' od ' + DATA.upiti.length
+    + ' &nbsp;·&nbsp; Beorol: ' + brojProizvodi
+    + ' &nbsp;·&nbsp; Prima: ' + brojMarka
+    + '</div>';
+
+  rows.forEach(function(u){
+    var d = u.timestamp ? new Date(u.timestamp).toLocaleString('hr-HR') : '—';
+    var badge = u.izvor === 'marka' ? 'upit-badge-marka' : 'upit-badge-proizvodi';
+    var label = u.izvor === 'marka' ? 'PRIMA' : 'BEOROL';
+    html += '<div class="upit-card">' +
+      '<div class="upit-header"><span class="upit-company">' + (u.tvrtka || '—') + '</span>' +
+      '<span><span class="' + badge + '">' + label + '</span> <span class="upit-date">' + d + '</span></span></div>' +
+      '<div class="upit-row"><b>Kontakt:</b> ' + (u.ime||'—') + ' · ' + (u.email||'—') + (u.telefon ? ' · ' + u.telefon : '') + '</div>' +
+      (u.proizvodi ? '<div class="upit-row"><b>Proizvodi:</b> ' + u.proizvodi.replace(/\n/g,'<br>') + '</div>' : '') +
+      (u.teme ? '<div class="upit-row"><b>Teme:</b> ' + u.teme + '</div>' : '') +
+      (u.poruka && u.poruka !== '—' ? '<div class="upit-row"><b>Poruka:</b> ' + u.poruka + '</div>' : '') +
+      '<div class="upit-row" style="margin-top:6px;"><b>CID:</b> <span class="cid-link" onclick="showCidHistory(\'' + u.cid + '\')">' + (u.cid||'—') + '</span></div>' +
+      '</div>';
+  });
+  list.innerHTML = html;
+}
+
+function showCidHistory(cid){
+  document.getElementById('cidSearch').value = cid;
+  showTab('cid');
+  renderCid();
+}
+
+function renderCid(){
+  var q = document.getElementById('cidSearch').value.trim().toLowerCase();
+  var el = document.getElementById('cidResult');
+  if(!q || !DATA){ el.innerHTML = ''; return; }
+
+  var visits = DATA.posjeti.filter(function(p){ return p.cid.toLowerCase() === q; });
+  var upits = DATA.upiti.filter(function(u){ return u.cid && u.cid.toLowerCase() === q; });
+
+  var html = '<div class="cid-history-title">CID: <span>' + q + '</span></div>';
+  html += '<div class="cid-stats">' + visits.length + ' posjeta · ' + upits.length + ' upita</div>';
+
+  if(visits.length > 0){
+    html += '<div class="cid-section-title">Povijest posjeta</div>';
+    html += '<div class="table-wrap" style="max-height:250px;margin-bottom:20px;"><table><thead><tr><th>Datum</th><th>Stranica</th></tr></thead><tbody>';
+    visits.forEach(function(v){
+      var d = v.timestamp ? new Date(v.timestamp).toLocaleString('hr-HR') : '—';
+      html += '<tr><td class="mono">' + d + '</td><td><span class="badge badge-' + v.stranica + '">' + v.stranica + '</span></td></tr>';
+    });
+    html += '</tbody></table></div>';
+  }
+
+  if(upits.length > 0){
+    html += '<div class="cid-section-title">Upiti</div>';
+    upits.forEach(function(u){
+      var d = u.timestamp ? new Date(u.timestamp).toLocaleString('hr-HR') : '—';
+      html += '<div class="upit-card"><div class="upit-row"><b>Datum:</b> ' + d + '</div>' +
+        '<div class="upit-row"><b>Tvrtka:</b> ' + (u.tvrtka||'—') + '</div>' +
+        '<div class="upit-row"><b>Kontakt:</b> ' + (u.ime||'—') + ' · ' + (u.email||'—') + '</div>' +
+        (u.proizvodi ? '<div class="upit-row"><b>Proizvodi:</b> ' + u.proizvodi.replace(/\n/g,'<br>') + '</div>' : '') +
+        '</div>';
+    });
+  }
+
+  if(visits.length === 0 && upits.length === 0){
+    html += '<div class="loading">Nema podataka za ovaj CID.</div>';
+  }
+  el.innerHTML = html;
+}
+
+function resetTab(tab){
+  var label = tab === 'Interesi' ? 'sve posjete' : 'sve upite';
+  if(!confirm('Jeste li sigurni da želite obrisati ' + label + '?\n\nOva radnja se ne može poništiti.')){
+    return;
+  }
+  if(!confirm('ZADNJA POTVRDA: Obrisati ' + label + '?')){
+    return;
+  }
+  google.script.run.withSuccessHandler(function(r){
+    if(r.success){
+      alert('Obrisano: ' + r.tab);
+      loadData();
+    } else {
+      alert('Greška: ' + r.error);
+    }
+  }).withFailureHandler(function(err){
+    alert('Greška: ' + err.message);
+  }).clearSheet(tab);
+}
+
+function showTab(name){
+  var tabs = document.querySelectorAll('.tab');
+  var panels = document.querySelectorAll('.panel');
+  tabs.forEach(function(t){ t.classList.remove('active'); });
+  panels.forEach(function(p){ p.classList.remove('active'); });
+  if(name === 'posjeti'){ tabs[0].classList.add('active'); document.getElementById('panelPosjeti').classList.add('active'); }
+  if(name === 'upiti'){ tabs[1].classList.add('active'); document.getElementById('panelUpiti').classList.add('active'); }
+  if(name === 'cid'){ tabs[2].classList.add('active'); document.getElementById('panelCid').classList.add('active'); }
+}
+
+loadData();
+</script>

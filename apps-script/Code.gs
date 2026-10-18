@@ -98,7 +98,20 @@ function getSheet_(tabName) {
 
 function logVisit_(cid, pageKey, params) {
   var sheet = getSheet_('Interesi');
-  sheet.appendRow([new Date(), cid, pageKey, (params && params.ref) ? params.ref : '']);
+  sheet.appendRow([new Date(), tekst_(cid), tekst_(pageKey), tekst_((params && params.ref) ? params.ref : '')]);
+}
+
+/**
+ * Sprjecava da Sheets tumaci vrijednost kao formulu.
+ * Vrijednost koja pocinje s =, +, - ili @ dobiva apostrof ispred,
+ * sto Sheets tretira kao "prisilni tekst" i ne prikazuje ga.
+ * Bez toga npr. telefon "+385 91 ..." zavrsi kao #ERROR!
+ */
+function tekst_(v) {
+  if (v === null || v === undefined) return '';
+  var s = String(v);
+  if (/^[=+\-@]/.test(s)) return "'" + s;
+  return s;
 }
 
 function saveUpit(data) {
@@ -106,15 +119,15 @@ function saveUpit(data) {
     var sheet = getSheet_('Upiti');
     sheet.appendRow([
       new Date(),
-      data.cid || '',
-      data.izvor || '',
-      data.tvrtka || '',
-      data.ime || '',
-      data.email || '',
-      data.telefon || '',
-      data.proizvodi || '',
-      data.poruka || '',
-      data.teme || ''
+      tekst_(data.cid),
+      tekst_(data.izvor),
+      tekst_(data.tvrtka),
+      tekst_(data.ime),
+      tekst_(data.email),
+      tekst_(data.telefon),
+      tekst_(data.proizvodi),
+      tekst_(data.poruka),
+      tekst_(data.teme)
     ]);
 
     // Pošalji potvrdu kupcu
