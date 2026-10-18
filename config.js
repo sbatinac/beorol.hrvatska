@@ -4,7 +4,7 @@
  * VAZNO: zamijeni GAS_API svojim Apps Script /exec URL-om.
  * Nadjes ga u Apps Script editoru: Deploy -> Manage deployments -> Web app URL.
  */
-var GAS_API = 'ZAMIJENI_ME_APPS_SCRIPT_EXEC_URL';
+var GAS_API = 'https://script.google.com/macros/s/AKfycbxbUSrsse1kY-pEWDpcMnUmycJEQONnjUQzacjm5edH4FN8u4tm2TzaW3ZoRg9B3XHC/exec';
 
 /* ---------- CID: stabilan identifikator posjetitelja ---------- */
 function getCid() {
