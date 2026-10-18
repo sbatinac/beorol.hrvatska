@@ -589,6 +589,147 @@
 <script src="config.js"></script>
 </head>
 <body>
+<!-- ========== ZASTITA PRISTUPA (Beorol Prima) ========== -->
+<style>
+  #pgGate{
+    position:fixed; inset:0; z-index:99999;
+    background:#0D0D0D;
+    display:flex; align-items:center; justify-content:center;
+    padding:24px;
+  }
+  #pgGate.pg-hidden{ display:none; }
+  #pgBody{ visibility:hidden; }
+  #pgBody.pg-open{ visibility:visible; }
+  .pg-card{
+    background:#FFFFFF; border-radius:16px;
+    padding:40px 34px; max-width:380px; width:100%;
+    text-align:center; box-shadow:0 8px 40px rgba(0,0,0,.35);
+  }
+  .pg-logo{ width:88px; height:auto; margin:0 0 20px; }
+  .pg-card h1{
+    font-family:'Oswald',sans-serif; font-size:19px; font-weight:700;
+    letter-spacing:.5px; text-transform:uppercase;
+    color:#0D0D0D; margin:0 0 6px;
+  }
+  .pg-card p{
+    font-family:'Inter',sans-serif; font-size:12.5px; line-height:1.6;
+    color:#8A8A8A; margin:0 0 22px;
+  }
+  .pg-card input{
+    width:100%; padding:13px 14px; box-sizing:border-box;
+    border:1.5px solid #E3E3E3; border-radius:9px;
+    font-family:'IBM Plex Mono',monospace; font-size:14px;
+    text-align:center; letter-spacing:2px; outline:none;
+    transition:border-color .15s ease;
+  }
+  .pg-card input:focus{ border-color:#1547B0; }
+  .pg-card button{
+    width:100%; margin-top:13px; padding:14px;
+    background:#1547B0; color:#fff; border:none; border-radius:10px;
+    font-family:'Oswald',sans-serif; font-size:14px; font-weight:700;
+    letter-spacing:.8px; text-transform:uppercase; cursor:pointer;
+    transition:background .15s ease;
+  }
+  .pg-card button:hover{ background:#103B90; }
+  .pg-card button:disabled{ background:#B8B8B8; cursor:default; }
+  .pg-err{
+    font-family:'Inter',sans-serif; font-size:12px; color:#E2231A;
+    margin-top:12px; min-height:16px;
+  }
+  .pg-back{
+    display:inline-block; margin-top:20px;
+    font-family:'IBM Plex Mono',monospace; font-size:10px;
+    letter-spacing:.5px; text-transform:uppercase;
+    color:#B0B0B0; text-decoration:none;
+  }
+  .pg-back:hover{ color:#1547B0; }
+</style>
+
+<div id="pgGate">
+  <div class="pg-card">
+    <img class="pg-logo" src="https://i.imgur.com/CMzaSsf.png" alt="Beorol">
+    <h1>Beorol Prima</h1>
+    <p>Ponuda za privatnu robnu marku dostupna je uz pristupnu lozinku.</p>
+    <input type="password" id="pgInput" placeholder="Lozinka" autocomplete="off" autofocus>
+    <button id="pgBtn">Otvori ponudu</button>
+    <div class="pg-err" id="pgErr"></div>
+    <a class="pg-back" href="index.html">&larr; Natrag na naslovnicu</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KLJUC = 'beorol_prima_pristup';
+  var ocekivaniHash = null;
+
+  function sha256(txt){
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(txt))
+      .then(function(buf){
+        return [].map.call(new Uint8Array(buf), function(b){
+          return b.toString(16).padStart(2,'0');
+        }).join('');
+      });
+  }
+
+  function otkljucaj(){
+    document.getElementById('pgGate').classList.add('pg-hidden');
+    var b = document.getElementById('pgBody');
+    if(b) b.classList.add('pg-open');
+    document.body.style.overflow = '';
+  }
+
+  // hash lozinke s Apps Scripta (JSONP zbog CORS-a)
+  window.__pgHash = function(h){ ocekivaniHash = h; };
+  var sc = document.createElement('script');
+  sc.src = GAS_API + '?action=markaPwdHash&callback=__pgHash';
+  document.head.appendChild(sc);
+
+  function provjeri(){
+    var btn = document.getElementById('pgBtn');
+    var err = document.getElementById('pgErr');
+    var unos = document.getElementById('pgInput').value;
+    if(!unos){ return; }
+    if(!ocekivaniHash){
+      err.textContent = 'Provjera još nije spremna, pokušajte za koji trenutak.';
+      return;
+    }
+    btn.disabled = true;
+    sha256(unos).then(function(h){
+      if(h === ocekivaniHash){
+        try { sessionStorage.setItem(KLJUC, h); } catch(e){}
+        otkljucaj();
+      } else {
+        err.textContent = 'Pogrešna lozinka.';
+        document.getElementById('pgInput').value = '';
+        btn.disabled = false;
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.body.style.overflow = 'hidden';
+    document.getElementById('pgBtn').addEventListener('click', provjeri);
+    document.getElementById('pgInput').addEventListener('keydown', function(e){
+      if(e.key === 'Enter') provjeri();
+    });
+    // vec otkljucano u ovoj sesiji?
+    var spremljen = null;
+    try { spremljen = sessionStorage.getItem(KLJUC); } catch(e){}
+    if(spremljen){
+      var cekaj = setInterval(function(){
+        if(ocekivaniHash){
+          clearInterval(cekaj);
+          if(spremljen === ocekivaniHash) otkljucaj();
+        }
+      }, 60);
+      setTimeout(function(){ clearInterval(cekaj); }, 6000);
+    }
+  });
+})();
+</script>
+
+<div id="pgBody">
+
 
 <div class="strip">
 
@@ -1769,5 +1910,6 @@ window.addEventListener('beforeunload', bwSaveMusicState);
 
 
 <script>logVisit("marka");</script>
+</div>
 </body>
 </html>

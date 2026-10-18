@@ -30,6 +30,17 @@ function doGet(e) {
   var params = (e && e.parameter) ? e.parameter : {};
   var pageKey = (params.page && PAGES[params.page]) ? params.page : DEFAULT_PAGE;
 
+  // ---- JSONP: hash lozinke za Marka stranicu ----
+  // Staticna stranica na GitHub Pagesu ne moze citati obican odgovor
+  // zbog CORS-a, pa se vraca JavaScript koji se ucita <script> tagom.
+  if (params.action === 'markaPwdHash') {
+    var cb = params.callback || 'callback';
+    var hash = getMarkaPwdHash_();
+    return ContentService
+      .createTextOutput(cb + '(' + JSON.stringify(hash) + ')')
+      .setMimeType(ContentService.MimeType.JAVASCRIPT);
+  }
+
   // ---- ADMIN ZAŠTITA ----
   if (pageKey === 'admin') {
     var adminPwd = PropertiesService.getScriptProperties().getProperty('ADMIN_PWD') || 'beorol2026';
@@ -306,6 +317,47 @@ function doPost(e) {
   return ContentService
     .createTextOutput(JSON.stringify(out))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+/**
+ * ---- LOZINKA ZA MARKA STRANICU ----
+ * Cuva se kao SHA-256 hash, nikad kao citljiv tekst,
+ * da lozinka ne curi kroz javni JSONP odgovor.
+ */
+function sha256_(s) {
+  var bytes = Utilities.computeDigest(
+    Utilities.DigestAlgorithm.SHA_256,
+    s,
+    Utilities.Charset.UTF_8
+  );
+  return bytes.map(function (b) {
+    return ((b < 0 ? b + 256 : b).toString(16)).slice(-2).padStart(2, '0');
+  }).join('');
+}
+
+function getMarkaPwdHash_() {
+  var props = PropertiesService.getScriptProperties();
+  var hash = props.getProperty('MARKA_PWD_HASH');
+  if (!hash) {
+    hash = sha256_('prima2026');          // pocetna lozinka
+    props.setProperty('MARKA_PWD_HASH', hash);
+  }
+  return hash;
+}
+
+/** Poziva se iz Admina. */
+function setMarkaPwd(pwd) {
+  try {
+    pwd = String(pwd || '').trim();
+    if (pwd.length < 4) {
+      return { success: false, error: 'Lozinka mora imati barem 4 znaka.' };
+    }
+    PropertiesService.getScriptProperties()
+      .setProperty('MARKA_PWD_HASH', sha256_(pwd));
+    return { success: true };
+  } catch (err) {
+    return { success: false, error: err.toString() };
+  }
 }
 
 function include(fileName) {

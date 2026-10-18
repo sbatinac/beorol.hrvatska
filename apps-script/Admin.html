@@ -172,6 +172,13 @@
   <button class="refresh-btn" onclick="loadData()">↻ Osvježi</button>
 </div>
 
+<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:14px 0 0;">
+  <span style="font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--grey);">Lozinka za Beorol Prima stranicu</span>
+  <input type="text" id="markaPwdInput" placeholder="nova lozinka" style="padding:6px 10px;border:1.5px solid var(--line);border-radius:6px;font-family:var(--font-mono);font-size:11px;width:160px;outline:none;">
+  <button onclick="spremiMarkaPwd()" style="background:var(--blue,#1547B0);border:none;color:#fff;padding:7px 14px;border-radius:6px;font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;cursor:pointer;">Spremi</button>
+  <span id="markaPwdMsg" style="font-family:var(--font-mono);font-size:10px;"></span>
+</div>
+
 <div style="display:flex;gap:8px;justify-content:flex-end;padding:12px 0 0;">
   <button onclick="resetTab('Interesi')" style="background:none;border:1.5px solid var(--line);color:var(--grey);padding:6px 14px;border-radius:6px;font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;cursor:pointer;transition:all .15s ease;" onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--red)'" onmouseout="this.style.borderColor='var(--line)';this.style.color='var(--grey)'">🗑 Obriši posjete</button>
   <button onclick="resetTab('Upiti')" style="background:none;border:1.5px solid var(--line);color:var(--grey);padding:6px 14px;border-radius:6px;font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;cursor:pointer;transition:all .15s ease;" onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--red)'" onmouseout="this.style.borderColor='var(--line)';this.style.color='var(--grey)'">🗑 Obriši upite</button>
@@ -321,6 +328,36 @@ function renderUpiti(){
       '</div>';
   });
   list.innerHTML = html;
+}
+
+
+function spremiMarkaPwd(){
+  var el = document.getElementById('markaPwdInput');
+  var msg = document.getElementById('markaPwdMsg');
+  var pwd = el.value.trim();
+  if(pwd.length < 4){
+    msg.style.color = '#E2231A';
+    msg.textContent = 'Najmanje 4 znaka.';
+    return;
+  }
+  msg.style.color = '#888';
+  msg.textContent = 'Spremam...';
+  google.script.run
+    .withSuccessHandler(function(r){
+      if(r && r.success){
+        msg.style.color = '#1E9E5A';
+        msg.textContent = 'Lozinka promijenjena.';
+        el.value = '';
+      } else {
+        msg.style.color = '#E2231A';
+        msg.textContent = (r && r.error) ? r.error : 'Greška.';
+      }
+    })
+    .withFailureHandler(function(e){
+      msg.style.color = '#E2231A';
+      msg.textContent = 'Greška: ' + e.message;
+    })
+    .setMarkaPwd(pwd);
 }
 
 function showCidHistory(cid){
