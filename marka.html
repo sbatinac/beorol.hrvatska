@@ -262,6 +262,38 @@
     border:1px solid var(--line);
     box-shadow:0 4px 15px rgba(13,13,13,.06);
   }
+  .pdf-dl-wrap{
+    text-align:center;
+    margin:14px 0 0;
+  }
+  .pdf-dl{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:11px 22px;
+    background:var(--accent);
+    color:#FFFFFF;
+    text-decoration:none;
+    border-radius:6px;
+    font-family:var(--font-mono);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    transition:background .15s, transform .15s;
+  }
+  .pdf-dl:hover{
+    background:var(--accent-dark);
+    transform:translateY(-1px);
+  }
+  .pdf-dl svg{ flex:none; }
+  .pdf-dl-hint{
+    display:block;
+    margin:8px 0 0;
+    font-family:var(--font-body);
+    font-size:11.5px;
+    color:var(--grey);
+  }
   @media (max-width:640px){
     .stat-grid{ grid-template-columns:repeat(2,1fr); }
   }
@@ -894,6 +926,19 @@
       <div class="pdf-frame-wrap">
         <iframe id="pdfViewer" src="" style="width:100%;height:500px;border:none;" allowfullscreen></iframe>
       </div>
+
+      <!-- PREUZIMANJE AKTIVNOG DOKUMENTA -->
+      <div class="pdf-dl-wrap">
+        <a id="pdfDownload" class="pdf-dl" href="#" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Preuzmi PDF</span>
+        </a>
+        <span class="pdf-dl-hint" id="pdfDownloadHint"></span>
+      </div>
     </div>
   </div>
 
@@ -925,6 +970,22 @@
     }
     document.getElementById('pdfViewer').src = src;
     document.getElementById('pdfNaslov').textContent = doc.naziv;
+
+    // Izravno preuzimanje PDF-a (ni Drive preview ni BookReader embed nemaju gumb za skidanje)
+    var dl = document.getElementById('pdfDownload');
+    var hint = document.getElementById('pdfDownloadHint');
+    if(dl){
+      if(doc.driveId){
+        dl.href = 'https://drive.google.com/uc?export=download&id=' + doc.driveId;
+        if(hint) hint.textContent = 'Preuzimanje kreće odmah.';
+      } else {
+        dl.href = doc.archiveFile
+          ? 'https://archive.org/download/' + doc.archiveId + '/' + encodeURIComponent(doc.archiveFile + '.pdf')
+          : 'https://archive.org/download/' + doc.archiveId;
+        if(hint) hint.textContent = 'Dokument se otvara u novoj kartici – spremite ga ili ispišite.';
+      }
+      dl.setAttribute('aria-label', 'Preuzmi PDF: ' + doc.naziv);
+    }
 
     for(var i=0;i<pdfDokumenti.length;i++){
       var thumb = document.getElementById('pdf-thumb-'+i);
